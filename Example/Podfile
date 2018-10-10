@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HHToolKit_Example' do
+  pod 'HHToolKit', :path => '../'
+
+  target 'HHToolKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
