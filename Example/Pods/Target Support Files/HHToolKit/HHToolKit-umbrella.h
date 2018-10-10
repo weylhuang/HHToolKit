@@ -10,7 +10,7 @@
 #endif
 #endif
 
-#import "ASIWrapper.h"
+#import "HHNetHelper.h"
 #import "NSObject+HHToolKit.h"
 #import "NSString+HHToolKit.h"
 #import "ASIAuthenticationDialog.h"
