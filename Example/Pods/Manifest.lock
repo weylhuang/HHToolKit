@@ -1,16 +1,42 @@
 PODS:
-  - HHToolKit (0.1.0)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - HHToolKit (0.1.0):
+    - FMDB (= 2.6.2)
+    - HHToolKit/no-arc (= 0.1.0)
+    - LKDBHelper (= 2.4)
+    - Masonry (= 0.6.3)
+  - HHToolKit/no-arc (0.1.0):
+    - FMDB (= 2.6.2)
+    - LKDBHelper (= 2.4)
+    - Masonry (= 0.6.3)
+  - LKDBHelper (2.4):
+    - FMDB
+  - Masonry (0.6.3)
 
 DEPENDENCIES:
+  - FMDB (= 2.6.2)
   - HHToolKit (from `../`)
+  - LKDBHelper (= 2.4)
+  - Masonry (= 0.6.3)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FMDB
+    - LKDBHelper
+    - Masonry
 
 EXTERNAL SOURCES:
   HHToolKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HHToolKit: 57fd5de7e48071f21447ea3d659ec063106012e2
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  HHToolKit: 00d9a7d090e195f30fe4ff920073e0bfb5d64087
+  LKDBHelper: 1162892ca4ffc28029070d6f40f57b333133f1c4
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
 
-PODFILE CHECKSUM: 77bb58162ef107ac3fcae2bb8c59c19097e002a5
+PODFILE CHECKSUM: 3ac6c47fa9f5e1fd2eaf88ac07f6eebfec2853c2
 
 COCOAPODS: 1.5.3

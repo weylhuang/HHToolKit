@@ -28,13 +28,24 @@ s.description      = 'A fast app creation toolkit, which allows you to build com
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'HHToolKit/Classes/**/*'
+  non_arc_files = 'HHToolKit/Classes/ASIHTTPRequest/*.{h,m}'
+  s.exclude_files = non_arc_files
   
+  s.subspec 'no-arc' do |sp|
+      sp.requires_arc = false
+      sp.source_files = non_arc_files
+  end
+
+
+  s.source_files = ['HHToolKit/Classes/**/*','HHToolKit/Classes/*']
   # s.resource_bundles = {
   #   'HHToolKit' => ['HHToolKit/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'FMDB', '2.6.2'
+  s.dependency 'LKDBHelper', '2.4'
+  s.dependency 'Masonry', '0.6.3'
+  
 end

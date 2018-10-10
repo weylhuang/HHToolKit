@@ -2,6 +2,9 @@ use_frameworks!
 
 target 'HHToolKit_Example' do
   pod 'HHToolKit', :path => '../'
+  pod 'Masonry', '0.6.3'
+  pod 'FMDB', '2.6.2'
+  pod 'LKDBHelper', '2.4'
 
   target 'HHToolKit_Tests' do
     inherit! :search_paths

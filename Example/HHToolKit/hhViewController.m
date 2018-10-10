@@ -7,7 +7,7 @@
 //
 
 #import "hhViewController.h"
-
+#import "ASIWrapper.h"
 @interface hhViewController ()
 
 @end
@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [ASIWrapper defaultWrapperObject];
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,9 +1,9 @@
 {
   "name": "HHToolKit",
   "version": "0.1.0",
-  "summary": "A short description of HHToolKit.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/weylhuang/HHToolKit",
+  "summary": "A fast app creation toolkit",
+  "description": "A fast app creation toolkit, which allows you to build complicated UI in short time.",
+  "homepage": "https://github.com/weylhuang/HHKit",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,33 @@
     "weylhuang": "57029662@qq.com"
   },
   "source": {
-    "git": "https://github.com/weylhuang/HHToolKit.git",
+    "git": "https://github.com/weylhuang/HHKit.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "HHToolKit/Classes/**/*"
+  "exclude_files": "HHToolKit/Classes/ASIHTTPRequest/*.{h,m}",
+  "source_files": [
+    "HHToolKit/Classes/**/*",
+    "HHToolKit/Classes/*"
+  ],
+  "dependencies": {
+    "FMDB": [
+      "2.6.2"
+    ],
+    "LKDBHelper": [
+      "2.4"
+    ],
+    "Masonry": [
+      "0.6.3"
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "no-arc",
+      "requires_arc": false,
+      "source_files": "HHToolKit/Classes/ASIHTTPRequest/*.{h,m}"
+    }
+  ]
 }
