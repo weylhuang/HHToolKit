@@ -1,0 +1,16 @@
+PODS:
+  - HHToolKit (0.1.0)
+
+DEPENDENCIES:
+  - HHToolKit (from `../`)
+
+EXTERNAL SOURCES:
+  HHToolKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HHToolKit: 57fd5de7e48071f21447ea3d659ec063106012e2
+
+PODFILE CHECKSUM: 77bb58162ef107ac3fcae2bb8c59c19097e002a5
+
+COCOAPODS: 1.5.3
