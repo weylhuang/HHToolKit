@@ -13,23 +13,23 @@
 		05470B4C9A055D59BE950AF31395BCD9 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E0C65C8FEF194187FA0DEE93B0B6CF8 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07DA7B2CE47EFEFD09BD65C2AD8BC9E7 /* Pods-HHToolKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B34C2A42E7D3F31CB1C93F059010B9 /* Pods-HHToolKit_Tests-dummy.m */; };
 		0AC08A412FB073ACC04AE4BE39B53D60 /* LKDBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7FFF2BBC3B51B8153766AB07F7D220 /* LKDBUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C5B1F680A9ED3648F97AF6B338C9901 /* NSString+HHToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EF037602163D0C716CD42903E3445BE8 /* NSString+HHToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EE0EB2D0D3DE913844F4B1B786F7452 /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF2D01BA69614069ED0886168689872 /* ASIAuthenticationDialog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C5B1F680A9ED3648F97AF6B338C9901 /* NSString+HHToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A5B0403698E6A014D7AE0ECF4216077 /* NSString+HHToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EE0EB2D0D3DE913844F4B1B786F7452 /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B361012CA67FF4AEAA281710ED199D1 /* ASIAuthenticationDialog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1593B65E8C4017E56D0245D949D580B5 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB198F9FB93F3FA7E2E663CB3DE9BB6 /* MASConstraint.m */; };
 		15B428705051597975139C2DB212F373 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F5727C5F7DA647246C2C19A68982DB /* FMDB-dummy.m */; };
 		19831AC03FBED12C729209DF0B00DCAE /* NSObject+LKDBHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CC2D9F4D650407CB778375EB0033042 /* NSObject+LKDBHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D2AA5DA5E3508C783C839E2C0A47DF4 /* ASIHTTPRequestConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D497D563CF46F9C0CECD17329D7F4C41 /* ASIHTTPRequestConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D2AA5DA5E3508C783C839E2C0A47DF4 /* ASIHTTPRequestConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 501A801CBCC58E64B814A9F2DB6193FE /* ASIHTTPRequestConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22063DD7AA9B74F248C7CA3F12ABC5A1 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 58624BE5F8415313024CEA483DB4EC98 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2ACA793ADBCF5034FE70962677A62F3C /* HHToolKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B69ABE75D92A9F724E461F8EC8E095C5 /* HHToolKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31BE7DA68E0251A41F99EC12E5D5E203 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 028FB077DE5D401B957BB01A3C1D94DB /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2ACA793ADBCF5034FE70962677A62F3C /* HHToolKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E92B7D409E039997364F489850817B77 /* HHToolKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BE7DA68E0251A41F99EC12E5D5E203 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1BCBA5B79BBE337D82FBE9E6FF4336 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		32DCC516E0C351A177097ADDCFD4E4B9 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = A7341F76F63359B0501B45A53EBE60B7 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3394420CA7CEB5C2B8C22DCE01FD7324 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E651C70C2E5F386CD8E705CF459513EF /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D53ED3DBBE9B5B40BFE5909706494F5 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9918D6F5308CE7F59FBFF13B3C2439 /* ViewController+MASAdditions.m */; };
-		4165E500EBDCE8C27D3EA09AF839C96C /* ASIDownloadCache.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE71A0AD1B2A6C953143A8BE60DE2A7 /* ASIDownloadCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		41B6CF563E2539ADC2EDB25371234212 /* ASIFormDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7A62DB7DBFFDE91CF1C2F40679A5C8 /* ASIFormDataRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4165E500EBDCE8C27D3EA09AF839C96C /* ASIDownloadCache.h in Headers */ = {isa = PBXBuildFile; fileRef = E453506277FA77A70FEF51AC59207D85 /* ASIDownloadCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41B6CF563E2539ADC2EDB25371234212 /* ASIFormDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F3481F6AE4FC47A0055B3D4FF2473B1 /* ASIFormDataRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43660AF83776381DDFF761D130A03719 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 46439062A35333E9EC45266C8FCD24B3 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43762D71F8E603D0955BC62987C6C536 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD8DBA9AC72CD07AC04D17B16CD535 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4762F030239E37A66070A8D77DA62A78 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2E20D79A8618751A2E122FC1F9AE5 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4762F030239E37A66070A8D77DA62A78 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 601245F785B0960E51818DB1096F6AE4 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4BC43657E42B7763B90C3BC98F2E9FA6 /* NSObject+LKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C49EDC9777E39B3CD0187F61DB71A8B5 /* NSObject+LKModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		4C9681A6187CCB4AAE3E3F5E24A375B2 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 869F087BEB9BC72A010232F5E2A0C91B /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E3AC0AD383767D3AF31E65CBD71B96E /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADCDEE1E3082B16071726F8EC2A415D /* FMDB.framework */; };
@@ -37,48 +37,48 @@
 		50B710EEA378456E09C34314E96BF394 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = CC013AC6428A44A9FFC8E6B11C6752AB /* MASViewAttribute.m */; };
 		517BA94B26A0572AF4B3EE6F8429286C /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = A1F843ADB90A766BCDFC42DD69260299 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6045596DA625B9681E6843B0E0F0B122 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 951ACF4A43851257659E1ACF705E26DE /* Masonry.framework */; };
-		604C73F41A4FAFD91F492EBC2BA5D42E /* ASICacheDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 299E6844558AD3AA0334A80346433ECC /* ASICacheDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		604C73F41A4FAFD91F492EBC2BA5D42E /* ASICacheDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C7AB302285AFAC6F6F83D94F2EE131 /* ASICacheDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60581D353B2285350292FCC19B6F99E9 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = C049991FB81E35D5CFCF9E5B6F629BE0 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60776F2D02A8504899B8D392EE9774FF /* ASIHTTPRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1058437AF04CC6A99933795B027F77DF /* ASIHTTPRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60776F2D02A8504899B8D392EE9774FF /* ASIHTTPRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D66BA7C9F69DD499E3E153FEFD331013 /* ASIHTTPRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61F50D390689E5C9DE2E8F8DFE8C6E64 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = AB7E2559E53711168D7641C38F9DA197 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		643F7FC7C2C92E4240FED9CFDDC0821A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F71F67A44B7AFD0406FF15FDD48BCD /* UIKit.framework */; };
 		6584715642531FF6C6BBD503CAE09989 /* Pods-HHToolKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAEB648CD39CD3AEB2770CC690156BC2 /* Pods-HHToolKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6869853BD0BCE85A093F1094D4EA84B9 /* ASIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 131BFB4B45A319AD16FCB88879850B46 /* ASIHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6869853BD0BCE85A093F1094D4EA84B9 /* ASIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CBCB2491EDBEC4EB3EF48CD6ABA7518 /* ASIHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AC5230336B17B701386D5ABAEF7AC60 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B8179E5F53B1440E36FAF8F67BE038B /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E220C85986EA2E31562ED3763A84F08 /* LKDBHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE955CDEEAAF75AF08726BFA0ED52A3E /* LKDBHelper.framework */; };
 		732D507EB449A0D86904D5665ED399FB /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BAF3D6253D6B5101F9A231DB5FD927 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7506D42E3D0CBC9A15BA31E558A37123 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D85DA4F06FDC0113E604F1777403D8 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7506D42E3D0CBC9A15BA31E558A37123 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC90089B4C80AB6223798765D327FD /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		79355BD5499E59326F5C7BC9CC25F497 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AF4F487AFED99AC169455482A6B8FF /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		7B48752B429AD0D8C7FD7A0F09CDC7B3 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADCDEE1E3082B16071726F8EC2A415D /* FMDB.framework */; };
-		7EEE89C1E258BCB6F4BD8637137B37E4 /* HHNetHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE4270E04CFB2E6A457F6F9A81618BD /* HHNetHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EEE89C1E258BCB6F4BD8637137B37E4 /* HHNetHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5905620E7878C97A6587055524753B51 /* HHNetHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8060718711D991373C8B5DDAA1772BA0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B871B8984219885049E84801197539A /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		81C69208FA910053E80FA85C5ED62A9A /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9425A35969B99D64813C345FD9BCE1 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		81C69208FA910053E80FA85C5ED62A9A /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACD718BE031A4603E56869FE425DF7C /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		86DF67F5FA8BE3959FF26C05F181E2F7 /* LKDB+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A660D1035D3B8B2DE8418330A6EF02 /* LKDB+Mapping.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		88B00C38DED726BB9CD29ED793CAF76B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3A8616F08FF2D90B27A7B2DAB2C17 /* Foundation.framework */; };
 		89A75088BD12CAD702545A88335F3B7E /* LKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6576FE4321BC818729FB1B4DC60AE7E6 /* LKDBHelper.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		8AD3A007E3F19E3F9ECEEBF0E20E1869 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 648B979D3447B2D036F949E7FB89A64F /* MASCompositeConstraint.m */; };
-		8FC2D9E8237C59B13BCBC251207AFBE9 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBFD1E8F3CB8E0E8E7413D53EB6020 /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8FC2D9E8237C59B13BCBC251207AFBE9 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A813278231679C78718BAB8A087235 /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		909C3C1D6577D37C084DA964F5A13CE1 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD257AC94C9BAAF0CEE32BC93FB0C60D /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		946A83F9D55E7732CC74EB6C00DF6223 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F9860B610B200B61FFE7D784BC3EFD /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		9881828CC3B1296ABC3304512700E13C /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 1108C1623C017D19B23F8510F2033754 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9EF608DE24420AA10DC4F0158C5BD2C5 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1BE02C2708CE70999DE39A7D3F4293 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9EF608DE24420AA10DC4F0158C5BD2C5 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0741C96F81F560C0FC08F0365AE24F62 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2FF0DFDD30614316E64BDA661FCAD26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3A8616F08FF2D90B27A7B2DAB2C17 /* Foundation.framework */; };
 		A3E9083DC20701CA03E5A52E4528E568 /* Pods-HHToolKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB3D8A4396F25562D9E3994008F2AD4D /* Pods-HHToolKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A81E81BB6FE65B38F4EF368F3E69AB6B /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = B93E273E80C1505E81AC6677A4F555D9 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A877CADD61F6F624E8DD05259DCF5D4B /* NSObject+HHToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E90EDC03F47DB75A2BE91893B1E0086C /* NSObject+HHToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A877CADD61F6F624E8DD05259DCF5D4B /* NSObject+HHToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A34F7EC25F6D436D2BF2F8AEDF144611 /* NSObject+HHToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A908604BEF8D05FEB619EDA2B2C09DCD /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE0EDF9BCBEEFC46A8A8A741EA859AD /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9C38AD97E8FB1CDEFFA15EEF0E8DD55 /* LKDBHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = DA163C4054EE2645B5D2BB8ED2681B52 /* LKDBHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACDA8EA3B32C5616D540F6546546C008 /* HHToolKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4385289067E80326EC10A3AC04BE5E44 /* HHToolKit-dummy.m */; };
-		B12097F0421018B1510D19B9B0300B11 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 81DF414D66A96883A8E54F40D1D07DCE /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACDA8EA3B32C5616D540F6546546C008 /* HHToolKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB750FF897691BD979418021B43B38BE /* HHToolKit-dummy.m */; };
+		B12097F0421018B1510D19B9B0300B11 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = F22FD254CB1796EAF28EA0308C9F2F0F /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1A2B716293BA4783BAE4D6675390617 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C842506F2EC5CA6A45B74547FBD1862 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B396F0E09289A8D719A4BDEF297AF857 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AF291ED42647D0AF469D296379ECBDEB /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		B9DE400CED3E7C0B0472BF9F82A48A82 /* ASINetworkQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = F2BF48B63A0BFA38E01267CFBB98FBC1 /* ASINetworkQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB659537BD14D1B6FADAAB2A077E8216 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 847A1F9AB9B1CF552C01CE42533DF8FD /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B396F0E09289A8D719A4BDEF297AF857 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD1D741A6AF4894472A0BE5D3D59FB /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B9DE400CED3E7C0B0472BF9F82A48A82 /* ASINetworkQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = AD37CF49F8952BB52DF70D91AFF8E64D /* ASINetworkQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB659537BD14D1B6FADAAB2A077E8216 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DE29F44E5C29CABCE3447E768AF50441 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BF3BE01EA64CE40E470AB4FD107F36FF /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDC0C3263ABB4E2D2B84588E3146E88 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		C0C2014F088416B8D61C2D11FCF38420 /* LKDBHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D00AC65EEF67B92D2E8892A96C673992 /* LKDBHelper-dummy.m */; };
 		C1E96152CCF79B5A806760FB47900D1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3A8616F08FF2D90B27A7B2DAB2C17 /* Foundation.framework */; };
-		C38EDC3D5B1242748BC01B50BD35B180 /* HHNetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A94C98796E68CFAC81E4162BA5CF754C /* HHNetHelper.m */; };
-		C38F227947D20D8D65224A05CDC1712C /* ASIInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = D509E7422A5D3EA727DAC92A65801BAC /* ASIInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C38EDC3D5B1242748BC01B50BD35B180 /* HHNetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EF10B5F43A2CF52CEE0BFEC47F745E3F /* HHNetHelper.m */; };
+		C38F227947D20D8D65224A05CDC1712C /* ASIInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B7E046FD6B6839F91E2C8F0CED6BFB1 /* ASIInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C399CBD9958F0A92A18D10C9E41339D4 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E6688E81FBBC1083C00E2A7D9B555C98 /* NSArray+MASAdditions.m */; };
 		C422E71E27ABBE6D606E062B525B982B /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AD04D845B7D2921D87DEA26540CECB49 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		C8CA34215373D17AE293AD62EE5C8114 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5211386533D269273CA3ED9F1CF690F8 /* MASViewConstraint.m */; };
@@ -89,20 +89,20 @@
 		D28B7B625BFCE2DADE68567FAA48547B /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EF62DE753692EC4BFA2C3DB79DAFAB /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3A167FF19D321BC9F6185F23F410BA9 /* LKDBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C7DFA10DE9487C504F042B00F2B20F /* LKDBUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		DA7B73959B1A448517DECD329073FF2A /* FMDB-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6ED65E7217272FFC4E1C0F5BE9E5C96 /* FMDB-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC2B12D103EE9D56010C14C2C0C32B36 /* ASIDataCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB747A2D82B16B47A6D1E6C8BE685A8 /* ASIDataCompressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF699F27D88ED0B02E550898AA63C0CD /* ASIDataDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9302CF2B0B0BFE2FF3F0699A89160009 /* ASIDataDecompressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0A5B9E69D03DEC2C2269A343D63C573 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA2C25DA4B9D09F67EAF4BEA43370DF /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E2CF7B2994FD3FC154A9A05CA4D02D54 /* NSObject+HHToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 738D476FC44FA1B6D7AF64359CC4739A /* NSObject+HHToolKit.m */; };
+		DC2B12D103EE9D56010C14C2C0C32B36 /* ASIDataCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = B66D3FF3426649C6339431EF23B2ADD4 /* ASIDataCompressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF699F27D88ED0B02E550898AA63C0CD /* ASIDataDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B47255896C365CB325F566FB176CE47 /* ASIDataDecompressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0A5B9E69D03DEC2C2269A343D63C573 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 106DEFAD632A63C07472409336A32F1E /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E2CF7B2994FD3FC154A9A05CA4D02D54 /* NSObject+HHToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E66E0E7B4358A79A6225D8B4FFEBB3DD /* NSObject+HHToolKit.m */; };
 		E3C74180F53E18468B81B97AF2C29D5E /* Pods-HHToolKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1C80FA274D6A5D250EE4BB2F1FDC5A /* Pods-HHToolKit_Example-dummy.m */; };
 		E3E1FF0058CCB593007E0570009B97F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3A8616F08FF2D90B27A7B2DAB2C17 /* Foundation.framework */; };
 		ECA0C2A31F4739EB69D2CD80F65F63E5 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 72B3CF408AB9AA8E6F669AFDA5D01FB6 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE236AF57B331CC06213FCCCC9A1AB2B /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 2213CD30B055806FE55847F9B650245F /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEC63B1C04DD286DDDD8029145F183DA /* NSObject+LKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F55346619091212134E9D400D8FF0E /* NSObject+LKDBHelper.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		F6060A35C5A7F62EA406CAE8537915B4 /* LKDB+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E50C2604CE8D25D220AD8D109089352 /* LKDB+Mapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6DC14D0088A6C2E4365C46753B69899 /* NSString+HHToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DA2C9BABC7DF507E3BEA6D9B792248 /* NSString+HHToolKit.m */; };
+		F6DC14D0088A6C2E4365C46753B69899 /* NSString+HHToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F4FF408EC62AD24CB6C0778DA4F77 /* NSString+HHToolKit.m */; };
 		FAFAEBC4E89030736E12F0CEFD5348C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3A8616F08FF2D90B27A7B2DAB2C17 /* Foundation.framework */; };
 		FD61B57B2819075E01810FA5F6CFD07C /* NSObject+LKModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E9993CE0E8125BF8124B91CDB43B48E /* NSObject+LKModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD6CE1CC7662BCDE81C27F0F5FAB01E4 /* ASIProgressDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B2A95EC39723DB37DA8A566E190D508 /* ASIProgressDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD6CE1CC7662BCDE81C27F0F5FAB01E4 /* ASIProgressDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F9E46EDFE862E4937D20CB456C78D8F /* ASIProgressDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF7A46060AA77397DFB065CF365F654D /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B69B79ACF3D5E12F8B630C9B7339568 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -173,23 +173,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01EBFD1E8F3CB8E0E8E7413D53EB6020 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIHTTPRequest.m; sourceTree = "<group>"; };
-		028FB077DE5D401B957BB01A3C1D94DB /* ASIInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIInputStream.m; sourceTree = "<group>"; };
 		0441FB55362AE46EA4D50AC6495336F9 /* FMDB.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FMDB.modulemap; sourceTree = "<group>"; };
 		06CC39C3B17C3A7CEF01BAD749E72578 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
+		0741C96F81F560C0FC08F0365AE24F62 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		09C7DFA10DE9487C504F042B00F2B20F /* LKDBUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LKDBUtils.m; path = LKDBHelper/Helper/LKDBUtils.m; sourceTree = "<group>"; };
-		1058437AF04CC6A99933795B027F77DF /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestDelegate.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		106DEFAD632A63C07472409336A32F1E /* ASIDataDecompressor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDataDecompressor.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIDataDecompressor.m; sourceTree = "<group>"; };
 		1108C1623C017D19B23F8510F2033754 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
-		131BFB4B45A319AD16FCB88879850B46 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIHTTPRequest.h; sourceTree = "<group>"; };
+		12698862738BE0E4EF80F9C5A719AB65 /* HHToolKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HHToolKit.modulemap; sourceTree = "<group>"; };
 		15F350E38C337DB111F517122CCBAD58 /* Pods-HHToolKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHToolKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		163E8C0E92D86CB9A25FF4DF37D138E0 /* LKDBHelper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LKDBHelper.modulemap; sourceTree = "<group>"; };
-		1BE4270E04CFB2E6A457F6F9A81618BD /* HHNetHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHNetHelper.h; path = HHToolKit/Classes/HHNetHelper.h; sourceTree = "<group>"; };
 		2213CD30B055806FE55847F9B650245F /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
-		26DA2C9BABC7DF507E3BEA6D9B792248 /* NSString+HHToolKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+HHToolKit.m"; path = "HHToolKit/Classes/NSString+HHToolKit.m"; sourceTree = "<group>"; };
-		299E6844558AD3AA0334A80346433ECC /* ASICacheDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = HHToolKit/Classes/ASIHTTPRequest/ASICacheDelegate.h; sourceTree = "<group>"; };
 		2A6C1B7054858A7A26BE5D716D6B524D /* LKDBHelper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKDBHelper-umbrella.h"; sourceTree = "<group>"; };
 		2B69B79ACF3D5E12F8B630C9B7339568 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
-		2B9425A35969B99D64813C345FD9BCE1 /* ASINetworkQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = HHToolKit/Classes/ASIHTTPRequest/ASINetworkQueue.m; sourceTree = "<group>"; };
 		2C6C299442D96F407B832561355564BA /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		2DAD8DBA9AC72CD07AC04D17B16CD535 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
 		2E61F014AD36AD0B5F5E110BD31EE710 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -198,73 +193,79 @@
 		32B137AC1EB56F60CAFC67D6BA1486BC /* Pods-HHToolKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHToolKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		35BAF3D6253D6B5101F9A231DB5FD927 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		39A660D1035D3B8B2DE8418330A6EF02 /* LKDB+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "LKDB+Mapping.m"; path = "LKDBHelper/Helper/LKDB+Mapping.m"; sourceTree = "<group>"; };
+		3A5B0403698E6A014D7AE0ECF4216077 /* NSString+HHToolKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+HHToolKit.h"; path = "HHToolKit/Classes/NSString+HHToolKit.h"; sourceTree = "<group>"; };
 		3E50C2604CE8D25D220AD8D109089352 /* LKDB+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LKDB+Mapping.h"; path = "LKDBHelper/Helper/LKDB+Mapping.h"; sourceTree = "<group>"; };
-		4385289067E80326EC10A3AC04BE5E44 /* HHToolKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HHToolKit-dummy.m"; sourceTree = "<group>"; };
+		3EDD1D741A6AF4894472A0BE5D3D59FB /* ASIDownloadCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDownloadCache.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIDownloadCache.m; sourceTree = "<group>"; };
+		3F9E46EDFE862E4937D20CB456C78D8F /* ASIProgressDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIProgressDelegate.h; sourceTree = "<group>"; };
+		4186292F039266DC27842EE1EE904B60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		46439062A35333E9EC45266C8FCD24B3 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		466EAF0D868CC8EC864BC32B0FA54B5A /* HHToolKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = HHToolKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4ACD718BE031A4603E56869FE425DF7C /* ASINetworkQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = HHToolKit/Classes/ASIHTTPRequest/ASINetworkQueue.m; sourceTree = "<group>"; };
 		4FCF92B12E8D7F7B768EB1B6B0CBB3EE /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		501A801CBCC58E64B814A9F2DB6193FE /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
 		51B6E2663BC19CFF4488296CB7AEA814 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		5211386533D269273CA3ED9F1CF690F8 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
 		53AA3095CE96ECA381806A1D24068A11 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
 		58624BE5F8415313024CEA483DB4EC98 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		5905620E7878C97A6587055524753B51 /* HHNetHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHNetHelper.h; path = HHToolKit/Classes/HHNetHelper.h; sourceTree = "<group>"; };
 		5A24B2E695382F76CA139014F8943BC2 /* Pods-HHToolKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHToolKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5CB747A2D82B16B47A6D1E6C8BE685A8 /* ASIDataCompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDataCompressor.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIDataCompressor.h; sourceTree = "<group>"; };
 		5E0C65C8FEF194187FA0DEE93B0B6CF8 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		5E6F4FF408EC62AD24CB6C0778DA4F77 /* NSString+HHToolKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+HHToolKit.m"; path = "HHToolKit/Classes/NSString+HHToolKit.m"; sourceTree = "<group>"; };
+		5F1BCBA5B79BBE337D82FBE9E6FF4336 /* ASIInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIInputStream.m; sourceTree = "<group>"; };
+		601245F785B0960E51818DB1096F6AE4 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIFormDataRequest.m; sourceTree = "<group>"; };
 		618A175D5C25DC8E52D6B7FE157ACB5C /* Pods-HHToolKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HHToolKit_Example.modulemap"; sourceTree = "<group>"; };
 		648B979D3447B2D036F949E7FB89A64F /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		6576FE4321BC818729FB1B4DC60AE7E6 /* LKDBHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LKDBHelper.m; path = LKDBHelper/Helper/LKDBHelper.m; sourceTree = "<group>"; };
 		6C842506F2EC5CA6A45B74547FBD1862 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		6F3481F6AE4FC47A0055B3D4FF2473B1 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIFormDataRequest.h; sourceTree = "<group>"; };
 		72B3CF408AB9AA8E6F669AFDA5D01FB6 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		738D476FC44FA1B6D7AF64359CC4739A /* NSObject+HHToolKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+HHToolKit.m"; path = "HHToolKit/Classes/NSObject+HHToolKit.m"; sourceTree = "<group>"; };
-		7B2A95EC39723DB37DA8A566E190D508 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIProgressDelegate.h; sourceTree = "<group>"; };
+		7AFC90089B4C80AB6223798765D327FD /* ASIDataCompressor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDataCompressor.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIDataCompressor.m; sourceTree = "<group>"; };
+		7B47255896C365CB325F566FB176CE47 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDataDecompressor.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIDataDecompressor.h; sourceTree = "<group>"; };
 		7FE3A547BB31C4924B12291162448F99 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
-		81DF414D66A96883A8E54F40D1D07DCE /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = HHToolKit/Classes/ASIHTTPRequest/Reachability.h; sourceTree = "<group>"; };
 		81EF62DE753692EC4BFA2C3DB79DAFAB /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		847A1F9AB9B1CF552C01CE42533DF8FD /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = HHToolKit/Classes/ASIHTTPRequest/Reachability.m; sourceTree = "<group>"; };
 		85CD752DA2F7CDD3818BDAC4B40AE596 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		869F087BEB9BC72A010232F5E2A0C91B /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
 		88388C4BFD6FA835D02776BBD233EEBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89F5727C5F7DA647246C2C19A68982DB /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
-		8AA2397AF5782B6E1170B51FB69253EE /* HHToolKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HHToolKit.xcconfig; sourceTree = "<group>"; };
+		8B361012CA67FF4AEAA281710ED199D1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		8B7E046FD6B6839F91E2C8F0CED6BFB1 /* ASIInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIInputStream.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIInputStream.h; sourceTree = "<group>"; };
 		8B8179E5F53B1440E36FAF8F67BE038B /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
 		8B871B8984219885049E84801197539A /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		8CC2D9F4D650407CB778375EB0033042 /* NSObject+LKDBHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+LKDBHelper.h"; path = "LKDBHelper/Helper/NSObject+LKDBHelper.h"; sourceTree = "<group>"; };
 		8EFE853B641DE652F62BA44A437E4FF7 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
-		9302CF2B0B0BFE2FF3F0699A89160009 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDataDecompressor.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIDataDecompressor.h; sourceTree = "<group>"; };
 		932561605916EE629AC70DA08A2A037B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94E3A8616F08FF2D90B27A7B2DAB2C17 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		951ACF4A43851257659E1ACF705E26DE /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A55868DF113512A2EE47E10E2FDCE20 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9CBCB2491EDBEC4EB3EF48CD6ABA7518 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIHTTPRequest.h; sourceTree = "<group>"; };
 		9CE0EDF9BCBEEFC46A8A8A741EA859AD /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		A1F843ADB90A766BCDFC42DD69260299 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
-		A2D85DA4F06FDC0113E604F1777403D8 /* ASIDataCompressor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDataCompressor.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIDataCompressor.m; sourceTree = "<group>"; };
 		A34A33967D84BF5E9EB4845EF67936A1 /* Pods-HHToolKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHToolKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		A34F7EC25F6D436D2BF2F8AEDF144611 /* NSObject+HHToolKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+HHToolKit.h"; path = "HHToolKit/Classes/NSObject+HHToolKit.h"; sourceTree = "<group>"; };
 		A7341F76F63359B0501B45A53EBE60B7 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
 		A859E891C894B5646C35A3AFC24D39CE /* LKDBHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LKDBHelper.framework; path = LKDBHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A94C98796E68CFAC81E4162BA5CF754C /* HHNetHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHNetHelper.m; path = HHToolKit/Classes/HHNetHelper.m; sourceTree = "<group>"; };
 		A9B34C2A42E7D3F31CB1C93F059010B9 /* Pods-HHToolKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HHToolKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		A9F55346619091212134E9D400D8FF0E /* NSObject+LKDBHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+LKDBHelper.m"; path = "LKDBHelper/Helper/NSObject+LKDBHelper.m"; sourceTree = "<group>"; };
 		AA01D6C1EFBDD1FFEA856A6430992F5F /* Pods-HHToolKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HHToolKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AAE71A0AD1B2A6C953143A8BE60DE2A7 /* ASIDownloadCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDownloadCache.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIDownloadCache.h; sourceTree = "<group>"; };
 		AB1C80FA274D6A5D250EE4BB2F1FDC5A /* Pods-HHToolKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HHToolKit_Example-dummy.m"; sourceTree = "<group>"; };
 		AB7E2559E53711168D7641C38F9DA197 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
 		ABDC0C3263ABB4E2D2B84588E3146E88 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		AC1BE02C2708CE70999DE39A7D3F4293 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		AD04D845B7D2921D87DEA26540CECB49 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
-		AF291ED42647D0AF469D296379ECBDEB /* ASIDownloadCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDownloadCache.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIDownloadCache.m; sourceTree = "<group>"; };
+		AD37CF49F8952BB52DF70D91AFF8E64D /* ASINetworkQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = HHToolKit/Classes/ASIHTTPRequest/ASINetworkQueue.h; sourceTree = "<group>"; };
 		B01B084090F1C9727BAB1B6CDFDE8BB1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B02C28F2B2FEC0D2467545F336327D65 /* LKDBHelper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKDBHelper.xcconfig; sourceTree = "<group>"; };
 		B195E1793137951F0B48908339CEF688 /* Pods-HHToolKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHToolKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B3AF4F487AFED99AC169455482A6B8FF /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
 		B4F71F67A44B7AFD0406FF15FDD48BCD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B69ABE75D92A9F724E461F8EC8E095C5 /* HHToolKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHToolKit-umbrella.h"; sourceTree = "<group>"; };
+		B66D3FF3426649C6339431EF23B2ADD4 /* ASIDataCompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDataCompressor.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIDataCompressor.h; sourceTree = "<group>"; };
+		B6C7AB302285AFAC6F6F83D94F2EE131 /* ASICacheDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = HHToolKit/Classes/ASIHTTPRequest/ASICacheDelegate.h; sourceTree = "<group>"; };
+		B7E6BDB3D9A62BC828310A2BBA954826 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B875E6570C5E590DF7530C1235CFE2C1 /* HHToolKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HHToolKit.xcconfig; sourceTree = "<group>"; };
 		B93E273E80C1505E81AC6677A4F555D9 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		B9920F43E4CD9CC6DE9C2391811AB7B2 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FMDB.framework; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E3BE5A343B9F48FCDEB210E8AC6D58 /* Pods-HHToolKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HHToolKit_Tests.modulemap"; sourceTree = "<group>"; };
 		BCC56A42AD434438A90CCCD70B5CF690 /* Pods-HHToolKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HHToolKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BF7A62DB7DBFFDE91CF1C2F40679A5C8 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIFormDataRequest.h; sourceTree = "<group>"; };
 		C049991FB81E35D5CFCF9E5B6F629BE0 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
-		C48E591EB57B500EB12D704CDD541048 /* HHToolKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HHToolKit.modulemap; sourceTree = "<group>"; };
 		C49EDC9777E39B3CD0187F61DB71A8B5 /* NSObject+LKModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+LKModel.m"; path = "LKDBHelper/Helper/NSObject+LKModel.m"; sourceTree = "<group>"; };
 		C6ED65E7217272FFC4E1C0F5BE9E5C96 /* FMDB-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-umbrella.h"; sourceTree = "<group>"; };
 		C876A15CEA7C8810577C85D711C577F4 /* LKDBHelper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKDBHelper-prefix.pch"; sourceTree = "<group>"; };
@@ -273,38 +274,37 @@
 		CC013AC6428A44A9FFC8E6B11C6752AB /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
 		CCC65DD0B22DB315BEC1680D0061D571 /* Pods-HHToolKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HHToolKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		CF4415B3F9E3849346DC62D04DCE117A /* Pods_HHToolKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HHToolKit_Example.framework; path = "Pods-HHToolKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF923F61B7CA80AA62C96D458EEE52CE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		D00AC65EEF67B92D2E8892A96C673992 /* LKDBHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LKDBHelper-dummy.m"; sourceTree = "<group>"; };
 		D14EE6FB2707AAD2B4C72733B5D04520 /* Pods-HHToolKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHToolKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D497D563CF46F9C0CECD17329D7F4C41 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
-		D509E7422A5D3EA727DAC92A65801BAC /* ASIInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIInputStream.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIInputStream.h; sourceTree = "<group>"; };
+		D66BA7C9F69DD499E3E153FEFD331013 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestDelegate.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
 		D6C451B4BA2E02A05868A0442EC8D227 /* Pods-HHToolKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HHToolKit_Example-resources.sh"; sourceTree = "<group>"; };
-		D7CC696DB72DF522EE23988C381F3390 /* HHToolKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHToolKit-prefix.pch"; sourceTree = "<group>"; };
+		D9A87070B7F29011AA98C6F6332F854D /* HHToolKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHToolKit-prefix.pch"; sourceTree = "<group>"; };
 		DA163C4054EE2645B5D2BB8ED2681B52 /* LKDBHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKDBHelper.h; path = LKDBHelper/Helper/LKDBHelper.h; sourceTree = "<group>"; };
 		DB3D8A4396F25562D9E3994008F2AD4D /* Pods-HHToolKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HHToolKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		DBF2D01BA69614069ED0886168689872 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIAuthenticationDialog.h; sourceTree = "<group>"; };
-		DC78A64B54873778A6F239D87DE7FF7A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD257AC94C9BAAF0CEE32BC93FB0C60D /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
 		DD9918D6F5308CE7F59FBFF13B3C2439 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		E09BB2D9D1029BA338F7AC00345229A0 /* HHToolKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = HHToolKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DE29F44E5C29CABCE3447E768AF50441 /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = HHToolKit/Classes/ASIHTTPRequest/Reachability.m; sourceTree = "<group>"; };
+		E1A813278231679C78718BAB8A087235 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIHTTPRequest.m; sourceTree = "<group>"; };
 		E21E940E78C7893377DD55522B6C31F2 /* Pods-HHToolKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HHToolKit_Tests-resources.sh"; sourceTree = "<group>"; };
+		E453506277FA77A70FEF51AC59207D85 /* ASIDownloadCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDownloadCache.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIDownloadCache.h; sourceTree = "<group>"; };
 		E651C70C2E5F386CD8E705CF459513EF /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		E6688E81FBBC1083C00E2A7D9B555C98 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		E90EDC03F47DB75A2BE91893B1E0086C /* NSObject+HHToolKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+HHToolKit.h"; path = "HHToolKit/Classes/NSObject+HHToolKit.h"; sourceTree = "<group>"; };
+		E66E0E7B4358A79A6225D8B4FFEBB3DD /* NSObject+HHToolKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+HHToolKit.m"; path = "HHToolKit/Classes/NSObject+HHToolKit.m"; sourceTree = "<group>"; };
+		E92B7D409E039997364F489850817B77 /* HHToolKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHToolKit-umbrella.h"; sourceTree = "<group>"; };
 		E949001BB5650A822FC79943F32A723D /* Pods_HHToolKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HHToolKit_Tests.framework; path = "Pods-HHToolKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB962505CD705DCF38127CE0569CC7A9 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
 		EBC69EC13CBBD0DB74549CCAFEB0D7EC /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		EEB198F9FB93F3FA7E2E663CB3DE9BB6 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		EF037602163D0C716CD42903E3445BE8 /* NSString+HHToolKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+HHToolKit.h"; path = "HHToolKit/Classes/NSString+HHToolKit.h"; sourceTree = "<group>"; };
+		EF10B5F43A2CF52CEE0BFEC47F745E3F /* HHNetHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHNetHelper.m; path = HHToolKit/Classes/HHNetHelper.m; sourceTree = "<group>"; };
 		F019B209148F6E9AF377E86EB71EAB1F /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
-		F0B83A93D64E8291D1F14FD6A148DCEF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		F105F07FCEDBA8D644E6060E27B1386F /* Pods-HHToolKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HHToolKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		F1F9860B610B200B61FFE7D784BC3EFD /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
-		F2BF48B63A0BFA38E01267CFBB98FBC1 /* ASINetworkQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = HHToolKit/Classes/ASIHTTPRequest/ASINetworkQueue.h; sourceTree = "<group>"; };
-		F2E2E20D79A8618751A2E122FC1F9AE5 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIFormDataRequest.m; sourceTree = "<group>"; };
+		F22FD254CB1796EAF28EA0308C9F2F0F /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = HHToolKit/Classes/ASIHTTPRequest/Reachability.h; sourceTree = "<group>"; };
 		F4D37093C0574B8A291443FFE713563A /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		FADCDEE1E3082B16071726F8EC2A415D /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB750FF897691BD979418021B43B38BE /* HHToolKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HHToolKit-dummy.m"; sourceTree = "<group>"; };
 		FE955CDEEAAF75AF08726BFA0ED52A3E /* LKDBHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKDBHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEA2C25DA4B9D09F67EAF4BEA43370DF /* ASIDataDecompressor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDataDecompressor.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIDataDecompressor.m; sourceTree = "<group>"; };
 		FF7FFF2BBC3B51B8153766AB07F7D220 /* LKDBUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKDBUtils.h; path = LKDBHelper/Helper/LKDBUtils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -401,6 +401,16 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/LKDBHelper";
+			sourceTree = "<group>";
+		};
+		33D9931953E36DBF07FA5F99AABB978D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				466EAF0D868CC8EC864BC32B0FA54B5A /* HHToolKit.podspec */,
+				CF923F61B7CA80AA62C96D458EEE52CE /* LICENSE */,
+				4186292F039266DC27842EE1EE904B60 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		3933012EA70F3CE5D01967CB756B4162 /* standard */ = {
@@ -508,20 +518,27 @@
 			path = "../Target Support Files/FMDB";
 			sourceTree = "<group>";
 		};
-		6343AA13FFA3693D2EECF31E4033AE9B /* Pod */ = {
+		6FA24D5FE4083016A00AD8198B9E8304 /* HHToolKit */ = {
 			isa = PBXGroup;
 			children = (
-				E09BB2D9D1029BA338F7AC00345229A0 /* HHToolKit.podspec */,
-				F0B83A93D64E8291D1F14FD6A148DCEF /* LICENSE */,
-				9A55868DF113512A2EE47E10E2FDCE20 /* README.md */,
+				5905620E7878C97A6587055524753B51 /* HHNetHelper.h */,
+				EF10B5F43A2CF52CEE0BFEC47F745E3F /* HHNetHelper.m */,
+				A34F7EC25F6D436D2BF2F8AEDF144611 /* NSObject+HHToolKit.h */,
+				E66E0E7B4358A79A6225D8B4FFEBB3DD /* NSObject+HHToolKit.m */,
+				3A5B0403698E6A014D7AE0ECF4216077 /* NSString+HHToolKit.h */,
+				5E6F4FF408EC62AD24CB6C0778DA4F77 /* NSString+HHToolKit.m */,
+				F1E9E484D2FE53868D019E364A58005B /* ASIHTTPRequest */,
+				33D9931953E36DBF07FA5F99AABB978D /* Pod */,
+				C980BB45D43B2C336DB4BC4AEAC00765 /* Support Files */,
 			);
-			name = Pod;
+			name = HHToolKit;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		75C80A801E4B152A59D2437665E4353D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				84F5EE137C42E9F667643DEB0CC7CE1F /* HHToolKit */,
+				6FA24D5FE4083016A00AD8198B9E8304 /* HHToolKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -557,37 +574,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		7DBD1D276C865CFBAFD958FCF52A580C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C48E591EB57B500EB12D704CDD541048 /* HHToolKit.modulemap */,
-				8AA2397AF5782B6E1170B51FB69253EE /* HHToolKit.xcconfig */,
-				4385289067E80326EC10A3AC04BE5E44 /* HHToolKit-dummy.m */,
-				D7CC696DB72DF522EE23988C381F3390 /* HHToolKit-prefix.pch */,
-				B69ABE75D92A9F724E461F8EC8E095C5 /* HHToolKit-umbrella.h */,
-				DC78A64B54873778A6F239D87DE7FF7A /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/HHToolKit";
-			sourceTree = "<group>";
-		};
-		84F5EE137C42E9F667643DEB0CC7CE1F /* HHToolKit */ = {
-			isa = PBXGroup;
-			children = (
-				1BE4270E04CFB2E6A457F6F9A81618BD /* HHNetHelper.h */,
-				A94C98796E68CFAC81E4162BA5CF754C /* HHNetHelper.m */,
-				E90EDC03F47DB75A2BE91893B1E0086C /* NSObject+HHToolKit.h */,
-				738D476FC44FA1B6D7AF64359CC4739A /* NSObject+HHToolKit.m */,
-				EF037602163D0C716CD42903E3445BE8 /* NSString+HHToolKit.h */,
-				26DA2C9BABC7DF507E3BEA6D9B792248 /* NSString+HHToolKit.m */,
-				BF8865B2B2165FD3CB1AA661FD5DA3F3 /* no-arc */,
-				6343AA13FFA3693D2EECF31E4033AE9B /* Pod */,
-				7DBD1D276C865CFBAFD958FCF52A580C /* Support Files */,
-			);
-			name = HHToolKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		BAC7362FF35130081CCE6502A5BC4104 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,33 +587,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BF8865B2B2165FD3CB1AA661FD5DA3F3 /* no-arc */ = {
+		C980BB45D43B2C336DB4BC4AEAC00765 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DBF2D01BA69614069ED0886168689872 /* ASIAuthenticationDialog.h */,
-				AC1BE02C2708CE70999DE39A7D3F4293 /* ASIAuthenticationDialog.m */,
-				299E6844558AD3AA0334A80346433ECC /* ASICacheDelegate.h */,
-				5CB747A2D82B16B47A6D1E6C8BE685A8 /* ASIDataCompressor.h */,
-				A2D85DA4F06FDC0113E604F1777403D8 /* ASIDataCompressor.m */,
-				9302CF2B0B0BFE2FF3F0699A89160009 /* ASIDataDecompressor.h */,
-				FEA2C25DA4B9D09F67EAF4BEA43370DF /* ASIDataDecompressor.m */,
-				AAE71A0AD1B2A6C953143A8BE60DE2A7 /* ASIDownloadCache.h */,
-				AF291ED42647D0AF469D296379ECBDEB /* ASIDownloadCache.m */,
-				BF7A62DB7DBFFDE91CF1C2F40679A5C8 /* ASIFormDataRequest.h */,
-				F2E2E20D79A8618751A2E122FC1F9AE5 /* ASIFormDataRequest.m */,
-				131BFB4B45A319AD16FCB88879850B46 /* ASIHTTPRequest.h */,
-				01EBFD1E8F3CB8E0E8E7413D53EB6020 /* ASIHTTPRequest.m */,
-				D497D563CF46F9C0CECD17329D7F4C41 /* ASIHTTPRequestConfig.h */,
-				1058437AF04CC6A99933795B027F77DF /* ASIHTTPRequestDelegate.h */,
-				D509E7422A5D3EA727DAC92A65801BAC /* ASIInputStream.h */,
-				028FB077DE5D401B957BB01A3C1D94DB /* ASIInputStream.m */,
-				F2BF48B63A0BFA38E01267CFBB98FBC1 /* ASINetworkQueue.h */,
-				2B9425A35969B99D64813C345FD9BCE1 /* ASINetworkQueue.m */,
-				7B2A95EC39723DB37DA8A566E190D508 /* ASIProgressDelegate.h */,
-				81DF414D66A96883A8E54F40D1D07DCE /* Reachability.h */,
-				847A1F9AB9B1CF552C01CE42533DF8FD /* Reachability.m */,
+				12698862738BE0E4EF80F9C5A719AB65 /* HHToolKit.modulemap */,
+				B875E6570C5E590DF7530C1235CFE2C1 /* HHToolKit.xcconfig */,
+				FB750FF897691BD979418021B43B38BE /* HHToolKit-dummy.m */,
+				D9A87070B7F29011AA98C6F6332F854D /* HHToolKit-prefix.pch */,
+				E92B7D409E039997364F489850817B77 /* HHToolKit-umbrella.h */,
+				B7E6BDB3D9A62BC828310A2BBA954826 /* Info.plist */,
 			);
-			name = "no-arc";
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HHToolKit";
 			sourceTree = "<group>";
 		};
 		CF1B4716B700AFFC7397CC6CCBDB6CA7 /* Targets Support Files */ = {
@@ -664,6 +635,35 @@
 			);
 			name = "Pods-HHToolKit_Tests";
 			path = "Target Support Files/Pods-HHToolKit_Tests";
+			sourceTree = "<group>";
+		};
+		F1E9E484D2FE53868D019E364A58005B /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				8B361012CA67FF4AEAA281710ED199D1 /* ASIAuthenticationDialog.h */,
+				0741C96F81F560C0FC08F0365AE24F62 /* ASIAuthenticationDialog.m */,
+				B6C7AB302285AFAC6F6F83D94F2EE131 /* ASICacheDelegate.h */,
+				B66D3FF3426649C6339431EF23B2ADD4 /* ASIDataCompressor.h */,
+				7AFC90089B4C80AB6223798765D327FD /* ASIDataCompressor.m */,
+				7B47255896C365CB325F566FB176CE47 /* ASIDataDecompressor.h */,
+				106DEFAD632A63C07472409336A32F1E /* ASIDataDecompressor.m */,
+				E453506277FA77A70FEF51AC59207D85 /* ASIDownloadCache.h */,
+				3EDD1D741A6AF4894472A0BE5D3D59FB /* ASIDownloadCache.m */,
+				6F3481F6AE4FC47A0055B3D4FF2473B1 /* ASIFormDataRequest.h */,
+				601245F785B0960E51818DB1096F6AE4 /* ASIFormDataRequest.m */,
+				9CBCB2491EDBEC4EB3EF48CD6ABA7518 /* ASIHTTPRequest.h */,
+				E1A813278231679C78718BAB8A087235 /* ASIHTTPRequest.m */,
+				501A801CBCC58E64B814A9F2DB6193FE /* ASIHTTPRequestConfig.h */,
+				D66BA7C9F69DD499E3E153FEFD331013 /* ASIHTTPRequestDelegate.h */,
+				8B7E046FD6B6839F91E2C8F0CED6BFB1 /* ASIInputStream.h */,
+				5F1BCBA5B79BBE337D82FBE9E6FF4336 /* ASIInputStream.m */,
+				AD37CF49F8952BB52DF70D91AFF8E64D /* ASINetworkQueue.h */,
+				4ACD718BE031A4603E56869FE425DF7C /* ASINetworkQueue.m */,
+				3F9E46EDFE862E4937D20CB456C78D8F /* ASIProgressDelegate.h */,
+				F22FD254CB1796EAF28EA0308C9F2F0F /* Reachability.h */,
+				DE29F44E5C29CABCE3447E768AF50441 /* Reachability.m */,
+			);
+			name = ASIHTTPRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1221,7 +1221,7 @@
 		};
 		21F358D2CF8F806E2EA48ACA49A7DFC3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AA2397AF5782B6E1170B51FB69253EE /* HHToolKit.xcconfig */;
+			baseConfigurationReference = B875E6570C5E590DF7530C1235CFE2C1 /* HHToolKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1569,7 +1569,7 @@
 		};
 		FFB0F128A8B19AC7A36E34479A16B323 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AA2397AF5782B6E1170B51FB69253EE /* HHToolKit.xcconfig */;
+			baseConfigurationReference = B875E6570C5E590DF7530C1235CFE2C1 /* HHToolKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

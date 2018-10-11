@@ -28,10 +28,10 @@ s.description      = 'A fast app creation toolkit, which allows you to build com
 
   s.ios.deployment_target = '8.0'
 
-  non_arc_files = 'HHToolKit/Classes/ASIHTTPRequest/*.{h,m}'
+  non_arc_files = 'HHToolKit/Classes/ASIHTTPRequest/*'
   s.exclude_files = non_arc_files
   
-  s.subspec 'no-arc' do |sp|
+  s.subspec 'ASIHTTPRequest' do |sp|
       sp.requires_arc = false
       sp.source_files = non_arc_files
   end
