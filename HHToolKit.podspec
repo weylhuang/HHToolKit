@@ -31,10 +31,10 @@ s.description      = 'A fast app creation toolkit, which allows you to build com
   non_arc_files = 'HHToolKit/Classes/ASIHTTPRequest/*'
   s.exclude_files = non_arc_files
   
-#  s.subspec 'ASIHTTPRequest' do |sp|
-#      sp.requires_arc = false
-#      sp.source_files = non_arc_files
-#  end
+  s.subspec 'ASIHTTPRequest' do |sp|
+      sp.requires_arc = false
+      sp.source_files = non_arc_files
+  end
 
 
   s.source_files = ['HHToolKit/Classes/**/*','HHToolKit/Classes/*']
