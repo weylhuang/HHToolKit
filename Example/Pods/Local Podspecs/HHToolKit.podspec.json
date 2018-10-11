@@ -36,7 +36,7 @@
   },
   "subspecs": [
     {
-      "name": "no-arc",
+      "name": "ASIHTTPRequest",
       "requires_arc": false,
       "source_files": "HHToolKit/Classes/ASIHTTPRequest/*.{h,m}"
     }
