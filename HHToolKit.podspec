@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HHToolKit'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A fast app creation toolkit'
 
 # This description is used to generate tags and improve search results.
@@ -44,8 +44,8 @@ s.description      = 'A fast app creation toolkit, which allows you to build com
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'FMDB', '2.6.2'
+  s.dependency 'FMDB'
   s.dependency 'LKDBHelper', '2.4'
-  s.dependency 'Masonry', '0.6.3'
+  s.dependency 'Masonry'
   
 end
