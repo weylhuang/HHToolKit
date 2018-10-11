@@ -16,7 +16,7 @@
 @property (nonatomic) BOOL success;
 @property (nonatomic, assign) BOOL isResultFromCache;
 @property (nonatomic) BOOL usingMultiform;
-
+@property (nonatomic) NSInteger postBodyEncode;  // 0: json, 1: form,
 @property (nonatomic,strong) NSDictionary* responseHeaders;
 @property (nonatomic,strong) NSArray* responseCookies;
 @property (nonatomic,strong) NSMutableDictionary* requestHeaders;
@@ -29,7 +29,6 @@
 +(HHNetHelper*)defaultConfig;
 +(void)getRequest:(HHNetHelper*)reqObj;
 +(void)postRequest:(HHNetHelper*)reqObj;
-+(void)request:(HHNetHelper*)reqObj Body:(NSString *)body;
 +(BOOL)downloadFile:(HHNetHelper*)reqObj destPath:(NSString*)destPath;
 - (HHNetHelper *)refresh;
 + (NSString *) param2String:(NSDictionary*)parameters;

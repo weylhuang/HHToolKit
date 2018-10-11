@@ -31,8 +31,8 @@
 
 
 
-+(void)request:(HHNetHelper*)reqObj method:(NSString *)method{
-    reqObj.method = method;
++(void)postRequest:(HHNetHelper*)reqObj{
+    reqObj.method = @"POST";
     
     NSString* urlFullPath = reqObj.path;
     ASIFormDataRequest *request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:urlFullPath]];
@@ -55,7 +55,7 @@
         }
         [request setPostFormat:ASIMultipartFormDataPostFormat];
     }else{
-        NSString *parameterString = [reqObj.parameters hh_JSONRepresentation];
+        NSString *parameterString = reqObj.postBodyEncode==1? [HHNetHelper param2String:reqObj.parameters]: [reqObj.parameters hh_JSONRepresentation];
         NSMutableData *parameterData = [[parameterString dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
         [request setPostBody:parameterData];
         
@@ -171,7 +171,6 @@
     }
     if ([result length] >= 2){
         result = [result substringToIndex:[result length] - 1];
-        result = [@"?" stringByAppendingString:result];
     }
     return [result stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
@@ -207,7 +206,7 @@
         reqObj.isResultFromCache = YES;
         return;
     }else{
-        NSString* urlFullPath = [NSString stringWithFormat:@"%@%@",reqObj.path, [HHNetHelper param2String:reqObj.parameters]];;
+        NSString* urlFullPath = [NSString stringWithFormat:@"%@?%@",reqObj.path, [HHNetHelper param2String:reqObj.parameters]];;
         NSLog(@"fullpath: %@", urlFullPath);
         ASIHTTPRequest *request = [[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:urlFullPath]];
         
@@ -251,18 +250,15 @@
     
 }
 
-+(void)postRequest:(HHNetHelper*)reqObj{
-    [self request:reqObj method:@"POST"];
-}
 
 
 
 
 +(BOOL)downloadFile:(HHNetHelper*)reqObj destPath:(NSString*)destPath{
-
-    NSString* urlFullPath = [NSString stringWithFormat:@"%@%@",reqObj.path, [HHNetHelper param2String:reqObj.parameters]];;
+    
+    NSString* urlFullPath = [NSString stringWithFormat:@"%@?%@",reqObj.path, [HHNetHelper param2String:reqObj.parameters]];;
     ASIHTTPRequest *request = [[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:urlFullPath]];
-
+    
     [request setDownloadDestinationPath:destPath];
     [request startSynchronous];
     

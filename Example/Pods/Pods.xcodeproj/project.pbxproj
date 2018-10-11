@@ -189,7 +189,7 @@
 		2DAD8DBA9AC72CD07AC04D17B16CD535 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
 		2E61F014AD36AD0B5F5E110BD31EE710 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9993CE0E8125BF8124B91CDB43B48E /* NSObject+LKModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+LKModel.h"; path = "LKDBHelper/Helper/NSObject+LKModel.h"; sourceTree = "<group>"; };
-		2ECBEE7DEDE528706E3C386617AFE205 /* HHToolKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HHToolKit.framework; path = HHToolKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ECBEE7DEDE528706E3C386617AFE205 /* HHToolKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HHToolKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B137AC1EB56F60CAFC67D6BA1486BC /* Pods-HHToolKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHToolKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		35BAF3D6253D6B5101F9A231DB5FD927 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		39A660D1035D3B8B2DE8418330A6EF02 /* LKDB+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "LKDB+Mapping.m"; path = "LKDBHelper/Helper/LKDB+Mapping.m"; sourceTree = "<group>"; };
@@ -197,9 +197,9 @@
 		3E50C2604CE8D25D220AD8D109089352 /* LKDB+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LKDB+Mapping.h"; path = "LKDBHelper/Helper/LKDB+Mapping.h"; sourceTree = "<group>"; };
 		3EDD1D741A6AF4894472A0BE5D3D59FB /* ASIDownloadCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDownloadCache.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIDownloadCache.m; sourceTree = "<group>"; };
 		3F9E46EDFE862E4937D20CB456C78D8F /* ASIProgressDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIProgressDelegate.h; sourceTree = "<group>"; };
-		4186292F039266DC27842EE1EE904B60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4186292F039266DC27842EE1EE904B60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		46439062A35333E9EC45266C8FCD24B3 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
-		466EAF0D868CC8EC864BC32B0FA54B5A /* HHToolKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = HHToolKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		466EAF0D868CC8EC864BC32B0FA54B5A /* HHToolKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = HHToolKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4ACD718BE031A4603E56869FE425DF7C /* ASINetworkQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = HHToolKit/Classes/ASIHTTPRequest/ASINetworkQueue.m; sourceTree = "<group>"; };
 		4FCF92B12E8D7F7B768EB1B6B0CBB3EE /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		501A801CBCC58E64B814A9F2DB6193FE /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 		7B47255896C365CB325F566FB176CE47 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDataDecompressor.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIDataDecompressor.h; sourceTree = "<group>"; };
 		7FE3A547BB31C4924B12291162448F99 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
 		81EF62DE753692EC4BFA2C3DB79DAFAB /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		85CD752DA2F7CDD3818BDAC4B40AE596 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CD752DA2F7CDD3818BDAC4B40AE596 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		869F087BEB9BC72A010232F5E2A0C91B /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
 		88388C4BFD6FA835D02776BBD233EEBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89F5727C5F7DA647246C2C19A68982DB /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
@@ -234,7 +234,7 @@
 		8CC2D9F4D650407CB778375EB0033042 /* NSObject+LKDBHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+LKDBHelper.h"; path = "LKDBHelper/Helper/NSObject+LKDBHelper.h"; sourceTree = "<group>"; };
 		8EFE853B641DE652F62BA44A437E4FF7 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		932561605916EE629AC70DA08A2A037B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94E3A8616F08FF2D90B27A7B2DAB2C17 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		951ACF4A43851257659E1ACF705E26DE /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBCB2491EDBEC4EB3EF48CD6ABA7518 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIHTTPRequest.h; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 		A34A33967D84BF5E9EB4845EF67936A1 /* Pods-HHToolKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHToolKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A34F7EC25F6D436D2BF2F8AEDF144611 /* NSObject+HHToolKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+HHToolKit.h"; path = "HHToolKit/Classes/NSObject+HHToolKit.h"; sourceTree = "<group>"; };
 		A7341F76F63359B0501B45A53EBE60B7 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
-		A859E891C894B5646C35A3AFC24D39CE /* LKDBHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LKDBHelper.framework; path = LKDBHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A859E891C894B5646C35A3AFC24D39CE /* LKDBHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKDBHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B34C2A42E7D3F31CB1C93F059010B9 /* Pods-HHToolKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HHToolKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		A9F55346619091212134E9D400D8FF0E /* NSObject+LKDBHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+LKDBHelper.m"; path = "LKDBHelper/Helper/NSObject+LKDBHelper.m"; sourceTree = "<group>"; };
 		AA01D6C1EFBDD1FFEA856A6430992F5F /* Pods-HHToolKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HHToolKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 		B7E6BDB3D9A62BC828310A2BBA954826 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B875E6570C5E590DF7530C1235CFE2C1 /* HHToolKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HHToolKit.xcconfig; sourceTree = "<group>"; };
 		B93E273E80C1505E81AC6677A4F555D9 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
-		B9920F43E4CD9CC6DE9C2391811AB7B2 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FMDB.framework; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9920F43E4CD9CC6DE9C2391811AB7B2 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E3BE5A343B9F48FCDEB210E8AC6D58 /* Pods-HHToolKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HHToolKit_Tests.modulemap"; sourceTree = "<group>"; };
 		BCC56A42AD434438A90CCCD70B5CF690 /* Pods-HHToolKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HHToolKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C049991FB81E35D5CFCF9E5B6F629BE0 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
@@ -273,8 +273,8 @@
 		CAEB648CD39CD3AEB2770CC690156BC2 /* Pods-HHToolKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HHToolKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		CC013AC6428A44A9FFC8E6B11C6752AB /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
 		CCC65DD0B22DB315BEC1680D0061D571 /* Pods-HHToolKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HHToolKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		CF4415B3F9E3849346DC62D04DCE117A /* Pods_HHToolKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HHToolKit_Example.framework; path = "Pods-HHToolKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF923F61B7CA80AA62C96D458EEE52CE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		CF4415B3F9E3849346DC62D04DCE117A /* Pods_HHToolKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HHToolKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF923F61B7CA80AA62C96D458EEE52CE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D00AC65EEF67B92D2E8892A96C673992 /* LKDBHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LKDBHelper-dummy.m"; sourceTree = "<group>"; };
 		D14EE6FB2707AAD2B4C72733B5D04520 /* Pods-HHToolKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHToolKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D66BA7C9F69DD499E3E153FEFD331013 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestDelegate.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
@@ -292,7 +292,7 @@
 		E6688E81FBBC1083C00E2A7D9B555C98 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
 		E66E0E7B4358A79A6225D8B4FFEBB3DD /* NSObject+HHToolKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+HHToolKit.m"; path = "HHToolKit/Classes/NSObject+HHToolKit.m"; sourceTree = "<group>"; };
 		E92B7D409E039997364F489850817B77 /* HHToolKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHToolKit-umbrella.h"; sourceTree = "<group>"; };
-		E949001BB5650A822FC79943F32A723D /* Pods_HHToolKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HHToolKit_Tests.framework; path = "Pods-HHToolKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E949001BB5650A822FC79943F32A723D /* Pods_HHToolKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HHToolKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB962505CD705DCF38127CE0569CC7A9 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
 		EBC69EC13CBBD0DB74549CCAFEB0D7EC /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		EEB198F9FB93F3FA7E2E663CB3DE9BB6 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
@@ -371,7 +371,6 @@
 				3933012EA70F3CE5D01967CB756B4162 /* standard */,
 				56BA5EB2CC1E14FDC74E8FCB5A8B8EA9 /* Support Files */,
 			);
-			name = FMDB;
 			path = FMDB;
 			sourceTree = "<group>";
 		};
@@ -500,7 +499,6 @@
 				DD9918D6F5308CE7F59FBFF13B3C2439 /* ViewController+MASAdditions.m */,
 				0FD33E321845489046564D7CCC57176B /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -558,7 +556,6 @@
 				C49EDC9777E39B3CD0187F61DB71A8B5 /* NSObject+LKModel.m */,
 				3147AF74A5B056D659F43A58E5FFBF42 /* Support Files */,
 			);
-			name = LKDBHelper;
 			path = LKDBHelper;
 			sourceTree = "<group>";
 		};
