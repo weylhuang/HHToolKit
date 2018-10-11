@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HHToolKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A fast app creation toolkit'
 
 # This description is used to generate tags and improve search results.
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
 s.description      = 'A fast app creation toolkit, which allows you to build complicated UI in short time.'
 
-  s.homepage         = 'https://github.com/weylhuang/HHKit'
+  s.homepage         = 'https://github.com/weylhuang/HHToolKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'weylhuang' => '57029662@qq.com' }
@@ -31,10 +31,10 @@ s.description      = 'A fast app creation toolkit, which allows you to build com
   non_arc_files = 'HHToolKit/Classes/ASIHTTPRequest/*'
   s.exclude_files = non_arc_files
   
-  s.subspec 'ASIHTTPRequest' do |sp|
-      sp.requires_arc = false
-      sp.source_files = non_arc_files
-  end
+#  s.subspec 'ASIHTTPRequest' do |sp|
+#      sp.requires_arc = false
+#      sp.source_files = non_arc_files
+#  end
 
 
   s.source_files = ['HHToolKit/Classes/**/*','HHToolKit/Classes/*']
