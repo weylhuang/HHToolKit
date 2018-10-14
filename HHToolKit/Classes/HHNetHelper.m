@@ -9,6 +9,9 @@
 #import <ifaddrs.h>
 #import <arpa/inet.h>
 #import <net/if.h>
+@implementation HHMultipart
+
+@end
 
 @implementation HHNetHelper
 - (id)userGetValueForModel:(LKDBProperty*)property
@@ -47,8 +50,9 @@
         
         for (NSString* key in reqObj.parameters.allKeys) {
             id value = reqObj.parameters[key];
-            if ([value isKindOfClass:[NSData class]]) {
-                [request addData:value forKey:key];
+            if ([value isKindOfClass:[HHMultipart class]]) {
+                [request addFile:[value localFilepath]  withFileName:[value remoteFilename] andContentType:[value ContentType] forKey:[value keyname]];
+//                [request addData:value forKey:key];
             }else{
                 [request addPostValue:value forKey:key];
             }
@@ -68,7 +72,7 @@
     
     NSError* error = [request error];
     if (!error) {
-        reqObj.success = YES;
+        reqObj.reqSuccess = YES;
         reqObj.cache = [request responseString];
         reqObj.responseHeaders = [request responseHeaders];
         reqObj.responseCookies = [request responseCookies];
@@ -76,15 +80,15 @@
         reqObj.isResultFromCache = NO;
         [HHNetHelper updateCache:reqObj];
     }else{
-        reqObj.success = NO;
+        reqObj.reqSuccess = NO;
         
     }
     
-    if (!reqObj.success && reqObj.bUseCacheWhenFail) {
+    if (!reqObj.reqSuccess && reqObj.bUseCacheWhenFail) {
         [HHNetHelper hitInCacheForFail:reqObj];
     }
     
-    if (!reqObj.success) {
+    if (!reqObj.reqSuccess) {
         
     }
     
@@ -97,7 +101,7 @@
     ret.cache = nil;
     ret.expirePeriod = -1;
     ret.parameters = [NSMutableDictionary dictionary];
-    ret.success = NO;
+    ret.reqSuccess = NO;
     ret.usingMultiform = NO;
     
     return ret;
@@ -106,7 +110,7 @@
 }
 
 -(BOOL)success{
-    if (self.success) {
+    if (self.reqSuccess) {
         NSInteger result = [[[self.cache hh_JSONValue] valueForKey:@"res"] integerValue];
         if (result == 2000) {
             return YES;
@@ -134,7 +138,7 @@
         HHNetHelper* tmp = [arr firstObject];
         if ([[NSDate date] timeIntervalSinceDate:[NSDate dateWithTimeIntervalSince1970:tmp.calledDate ] ] < reqObj.expirePeriod) {
             reqObj.cache = tmp.cache;
-            reqObj.success = YES;
+            reqObj.reqSuccess = YES;
             return YES;
         }
     }
@@ -147,7 +151,7 @@
     if (arr.count > 0) {
         HHNetHelper* tmp = [arr firstObject];
         reqObj.cache = tmp.cache;
-        reqObj.success = YES;
+        reqObj.reqSuccess = YES;
         reqObj.isResultFromCache = YES;
     }
 }
@@ -219,7 +223,7 @@
             NSDictionary *dic = [[request responseString] hh_JSONValue];
             // dic != nil是为了预防404
             if (dic != nil) {
-                reqObj.success = YES;
+                reqObj.reqSuccess = YES;
                 reqObj.cache =[request responseString];
                 [reqObj resolve];
                 reqObj.isResultFromCache = NO;
@@ -229,18 +233,18 @@
             }
             else{
                 
-                reqObj.success = NO;
+                reqObj.reqSuccess = NO;
             }
             
         }else{
-            reqObj.success = NO;
+            reqObj.reqSuccess = NO;
         }
         
-        if (!reqObj.success && reqObj.bUseCacheWhenFail) {
+        if (!reqObj.reqSuccess && reqObj.bUseCacheWhenFail) {
             [HHNetHelper hitInCacheForFail:reqObj];
         }
         
-        if (!reqObj.success) {
+        if (!reqObj.reqSuccess) {
             
         }
     }

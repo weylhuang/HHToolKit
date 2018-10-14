@@ -1,6 +1,14 @@
 
 #import <Foundation/Foundation.h>
 
+@interface HHMultipart : NSObject
+@property (nonatomic,strong) NSString* keyname;
+@property (nonatomic,strong) NSString* remoteFilename;
+@property (nonatomic,strong) NSString* localFilepath;
+@property (nonatomic,strong) NSString* ContentType;
+
+@end
+
 
 @interface HHNetHelper : NSObject
 
@@ -13,7 +21,7 @@
 @property (nonatomic) double calledDate;
 @property (nonatomic) NSInteger expirePeriod;
 @property (nonatomic) NSInteger timeout;
-@property (nonatomic) BOOL success;
+@property (nonatomic) BOOL reqSuccess;
 @property (nonatomic, assign) BOOL isResultFromCache;
 @property (nonatomic) BOOL usingMultiform;
 @property (nonatomic) NSInteger postBodyEncode;  // 0: json, 1: form,

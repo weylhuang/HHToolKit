@@ -47,6 +47,8 @@
 		6AC5230336B17B701386D5ABAEF7AC60 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B8179E5F53B1440E36FAF8F67BE038B /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E220C85986EA2E31562ED3763A84F08 /* LKDBHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE955CDEEAAF75AF08726BFA0ED52A3E /* LKDBHelper.framework */; };
 		732D507EB449A0D86904D5665ED399FB /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BAF3D6253D6B5101F9A231DB5FD927 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73ECCC6121736AAB00C03AC2 /* HHDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 73ECCC5F21736AAB00C03AC2 /* HHDebug.h */; };
+		73ECCC6221736AAB00C03AC2 /* HHDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 73ECCC6021736AAB00C03AC2 /* HHDebug.m */; };
 		7506D42E3D0CBC9A15BA31E558A37123 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC90089B4C80AB6223798765D327FD /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		79355BD5499E59326F5C7BC9CC25F497 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AF4F487AFED99AC169455482A6B8FF /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		7B48752B429AD0D8C7FD7A0F09CDC7B3 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADCDEE1E3082B16071726F8EC2A415D /* FMDB.framework */; };
@@ -219,6 +221,8 @@
 		6C842506F2EC5CA6A45B74547FBD1862 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
 		6F3481F6AE4FC47A0055B3D4FF2473B1 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIFormDataRequest.h; sourceTree = "<group>"; };
 		72B3CF408AB9AA8E6F669AFDA5D01FB6 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		73ECCC5F21736AAB00C03AC2 /* HHDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HHDebug.h; path = HHToolKit/Classes/HHDebug.h; sourceTree = "<group>"; };
+		73ECCC6021736AAB00C03AC2 /* HHDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HHDebug.m; path = HHToolKit/Classes/HHDebug.m; sourceTree = "<group>"; };
 		7AFC90089B4C80AB6223798765D327FD /* ASIDataCompressor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDataCompressor.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIDataCompressor.m; sourceTree = "<group>"; };
 		7B47255896C365CB325F566FB176CE47 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDataDecompressor.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIDataDecompressor.h; sourceTree = "<group>"; };
 		7FE3A547BB31C4924B12291162448F99 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
@@ -525,6 +529,8 @@
 				E66E0E7B4358A79A6225D8B4FFEBB3DD /* NSObject+HHToolKit.m */,
 				3A5B0403698E6A014D7AE0ECF4216077 /* NSString+HHToolKit.h */,
 				5E6F4FF408EC62AD24CB6C0778DA4F77 /* NSString+HHToolKit.m */,
+				73ECCC5F21736AAB00C03AC2 /* HHDebug.h */,
+				73ECCC6021736AAB00C03AC2 /* HHDebug.m */,
 				F1E9E484D2FE53868D019E364A58005B /* ASIHTTPRequest */,
 				33D9931953E36DBF07FA5F99AABB978D /* Pod */,
 				C980BB45D43B2C336DB4BC4AEAC00765 /* Support Files */,
@@ -752,6 +758,7 @@
 				9881828CC3B1296ABC3304512700E13C /* FMDatabaseQueue.h in Headers */,
 				DA7B73959B1A448517DECD329073FF2A /* FMDB-umbrella.h in Headers */,
 				517BA94B26A0572AF4B3EE6F8429286C /* FMDB.h in Headers */,
+				73ECCC6121736AAB00C03AC2 /* HHDebug.h in Headers */,
 				32DCC516E0C351A177097ADDCFD4E4B9 /* FMResultSet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -997,6 +1004,7 @@
 				BF3BE01EA64CE40E470AB4FD107F36FF /* FMDatabaseAdditions.m in Sources */,
 				79355BD5499E59326F5C7BC9CC25F497 /* FMDatabasePool.m in Sources */,
 				C422E71E27ABBE6D606E062B525B982B /* FMDatabaseQueue.m in Sources */,
+				73ECCC6221736AAB00C03AC2 /* HHDebug.m in Sources */,
 				15B428705051597975139C2DB212F373 /* FMDB-dummy.m in Sources */,
 				43762D71F8E603D0955BC62987C6C536 /* FMResultSet.m in Sources */,
 			);
