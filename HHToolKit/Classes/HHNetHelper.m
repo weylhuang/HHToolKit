@@ -210,9 +210,15 @@
         reqObj.isResultFromCache = YES;
         return;
     }else{
-        NSString* urlFullPath = [NSString stringWithFormat:@"%@?%@",reqObj.path, [HHNetHelper param2String:reqObj.parameters]];;
+        NSString* urlFullPath = reqObj.path;
+        if (reqObj.parameters && reqObj.parameters.count > 0) {
+            urlFullPath = [urlFullPath stringByAppendingString:[NSString stringWithFormat:@"?%@", [HHNetHelper param2String:reqObj.parameters]]];
+        }
         NSLog(@"fullpath: %@", urlFullPath);
         ASIHTTPRequest *request = [[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:urlFullPath]];
+        if (reqObj.requestHeaders!=nil) {
+            [request setRequestHeaders:reqObj.requestHeaders];
+        }
         
         [request setAllowCompressedResponse:YES]; //默认是YES
         [request setTimeOutSeconds:reqObj.timeout ? : 5];
@@ -259,10 +265,13 @@
 
 
 +(BOOL)downloadFile:(HHNetHelper*)reqObj destPath:(NSString*)destPath{
-    
-    NSString* urlFullPath = [NSString stringWithFormat:@"%@?%@",reqObj.path, [HHNetHelper param2String:reqObj.parameters]];;
+    // destPath is the end-point file path
+    NSString* urlFullPath = reqObj.path;
+    if (reqObj.parameters && reqObj.parameters.count > 0) {
+        urlFullPath = [urlFullPath stringByAppendingString:[NSString stringWithFormat:@"?%@", [HHNetHelper param2String:reqObj.parameters]]];
+    }
     ASIHTTPRequest *request = [[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:urlFullPath]];
-    
+    [request setTimeOutSeconds:30.f];
     [request setDownloadDestinationPath:destPath];
     [request startSynchronous];
     
@@ -272,6 +281,7 @@
     }else{
         return NO;
     }
+    
 }
 
 @end
