@@ -7,7 +7,8 @@
 //
 
 #import "hhViewController.h"
-#import "HHNetHelper.h"
+#import "HHToolKit.h"
+#import <Masonry/Masonry.h>
 @interface hhViewController ()
 
 @end
@@ -18,6 +19,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    UILabel* l = [UILabel new];
+    l.text = @"aaaaaaaa";
+    ;
+    
+    UILabel* l2 = [UILabel new];
+    l2.text = @"bbbbbbbb";
+    l2.backgroundColor = [UIColor redColor];
+    
+    UIView* v = [[UIView new] hh_verticalLayoutSubviews:@[[l hh_withSize:CGSizeMake(100, 30)],[l2 hh_withSize:CGSizeMake(100, 30)]]];
+    
+    [self.view addSubview:v];
+    [v mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+    }];
+    
     
 }
 

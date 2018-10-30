@@ -6,9 +6,5 @@ target 'HHToolKit_Example' do
   pod 'FMDB', '2.6.2'
   pod 'LKDBHelper', '2.4'
 
-  target 'HHToolKit_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  project 'HHToolKit.xcodeproj'
 end

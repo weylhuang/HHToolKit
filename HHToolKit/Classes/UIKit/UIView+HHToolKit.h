@@ -25,46 +25,22 @@ typedef NS_ENUM(NSInteger, ContainerStyle) {
 
 @interface UIView (HHToolKit)
 
+- (UIView*)hh_verticalLayoutSubviews:(NSArray*)controlArr;
+-(UIView*)hh_verticalLayoutSubviews:(NSArray*)controlArr offsets:(NSArray*)offsetArr;
++(UIView*)hh_horizontalLayoutSubviews:(NSArray*)controlArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip weightArr:(NSArray*)weightArr;
 +(UIView*)hh_horizontalLinearLayoutWith:(NSArray*)viewArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip;
-+(UIView*)hh_horizontalGroupWith:(NSArray*)viewArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip weightArr:(NSArray*)weightArr;
 
-+(UIView*)hh_horizontalGroupFullScreenForIOS7:(NSArray*)controlArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip weightArr:(NSArray*)weightArr;
-
--(UIView*)hh_addSubviewsWithVerticalLayout:(NSArray*)controlArr;
-
--(UIView*)hh_addSubviewsWithVerticalLayout:(NSArray*)viewArr offsets:(NSArray*)offsetArr;
-
--(UIView*)hh_wrapperWithStyle:(ContainerStyle)style;
-
--(UIView*)hh_wrapperWithEdgeInsets:(UIEdgeInsets)insets;
-
--(UIView*)hh_wrapper;
-
--(UIView*)hh_wrapperVertical;
--(UIView*)hh_wrapperHorizontal;
-
--(UIButton*)hh_wrapperWithButton;
-
--(UIScrollView*)hh_wrapperWithHorizontalScrollView;
-
--(UIScrollView*)hh_wrapperWithScrollView;
+-(UIView*)hh_containerWithStyle:(ContainerStyle)style;
+-(UIView*)hh_containerWithEdgeInsets:(UIEdgeInsets)insets;
+-(UIView*)hh_container;
+-(UIView*)hh_containerVertical;
+-(UIView*)hh_containerHorizontal;
+-(UIScrollView*)hh_containerHorizontalScrollView;
+-(UIScrollView*)hh_containerVerticalScrollView;
 
 -(UIView*)hh_withHeight:(double)height;
 -(UIView*)hh_withWidth:(double)width;
-
 -(UIView*)hh_withSize:(CGSize)size;
 
--(UIView*)hh_withBackgroundColor:(UIColor*)color;
-
--(UIView*)hh_withBorderWidth:(double)width color:(UIColor*)color;
-
--(UIView*)hh_withCornerRadius:(double)radius;
--(UIView*)hh_withGradientBackgroundColor:(CGRect)rect colors:(NSArray*)colors;
-
--(UITableViewCell*)hh_seperateLineWithEdgeInsets:(UIEdgeInsets)edgeInsets;
--(UITableViewCell*)hh_withFullSeperateLine;
-+(UIView*)hh_commonHeaderBackground:(CGSize)size;
-+ (UIView *)hh_topWindow;
--(UIViewController*)hh_correspondController;
 
 @end
