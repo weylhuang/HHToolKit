@@ -10,9 +10,13 @@
 #endif
 #endif
 
+#import "HHDebug.h"
 #import "HHNetHelper.h"
 #import "NSObject+HHToolKit.h"
 #import "NSString+HHToolKit.h"
+#import "TPDCategoryMacro.h"
+#import "TPDShortCutMacro.h"
+#import "UIView+TPDExtension.h"
 #import "ASIAuthenticationDialog.h"
 #import "ASICacheDelegate.h"
 #import "ASIDataCompressor.h"
