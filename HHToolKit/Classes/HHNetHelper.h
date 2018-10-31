@@ -45,5 +45,10 @@
 
 @end
 
+NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notification";
 
+@interface HHNetSpeedDetector : NSObject
++(HHNetSpeedDetector*)getInstance;
+-(void)startDetect:(NSString*)testDownloadFilepath;
+@end
 

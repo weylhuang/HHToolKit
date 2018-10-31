@@ -9,6 +9,7 @@
 #import <ifaddrs.h>
 #import <arpa/inet.h>
 #import <net/if.h>
+#import "HHMacro.h"
 @implementation HHMultipart
 
 @end
@@ -287,3 +288,80 @@
 @end
 
 
+@interface HHNetSpeedDetector ()
+@property (nonatomic,strong) NSURLConnection* connection;
+@property (nonatomic,strong) NSMutableData* data;
+@property (nonatomic,strong) NSTimer* timer;
+@property (nonatomic) double startTimestamp;
+@end
+
+@implementation HHNetSpeedDetector
++(void)load{
+    [[self getInstance] startDetect:@"https://dldir1.qq.com/qqfile/QQforMac/QQ_V6.5.2.dmg"];
+}
++(HHNetSpeedDetector*)getInstance{
+    static HHNetSpeedDetector* detector = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        detector = [HHNetSpeedDetector new];
+        
+    });
+    return detector;
+}
+
+-(void)startDetect:(NSString*)testDownloadFilepath{
+    @synchronized (self) {
+        if (self.connection!=nil) {
+            NSLog(@"HHNetSpeedDetector: 测速进行中");
+            return;
+        }
+        static int tick;
+        self.data = [NSMutableData data];
+        self.startTimestamp = [[NSDate date] timeIntervalSince1970];
+        self.connection = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:testDownloadFilepath]] delegate:self startImmediately:YES];
+        tick = 0;
+        WEAK(self)
+        self.timer = [NSTimer timerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+            tick ++;
+            double speed = weakself.data.length / tick;
+            NSLog(@"HHNetSpeedDetector: speed = %.1lfK", speed / 1024 );
+            if (tick == 5) {
+                [weakself finishDetect];
+            }
+        }];
+    }
+    
+}
+
+-(void)finishDetect{
+    double time = [[NSDate date] timeIntervalSince1970] - self.startTimestamp;
+    double speed = self.data.length / time;
+    NSLog(@"HHNetSpeedDetector: 平均速度 = %.1lfK/s", speed / 1024 );
+    [[NSNotificationCenter defaultCenter] postNotificationName:hh_network_speed_detect_notification object:@(speed/1024)];
+    [self.timer invalidate];
+    self.timer = nil;
+    [self.connection cancel];
+    self.connection = nil;
+    self.data = nil;
+}
+
+#pragma mark - urlconnect delegate methods
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    
+}
+
+- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
+    [self.data appendData:data];
+}
+
+
+
+
+
+- (void) connectionDidFinishLoading:(NSURLConnection *)connection{
+    NSLog(@"HHNetSpeedDetector: connectionDidFinishLoading");
+    [self finishDetect];
+}
+
+@end
