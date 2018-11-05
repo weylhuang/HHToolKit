@@ -44,3 +44,15 @@ typedef NS_ENUM(NSInteger, ContainerStyle) {
 
 
 @end
+
+@interface UIView (HHAppearance)
+
+-(UIView*)hh_withBackgroundColor:(UIColor*)color;
+-(UIView*)hh_withBorderWidth:(double)width color:(UIColor*)color;
+-(UIView*)hh_withCornerRadius:(double)radius;
+-(UIView*)hh_withGradientBackgroundColor:(CGRect)rect colors:(NSArray*)colors;
+@end
+
+@interface UIView (HHHelper)
+-(UIViewController*)hh_correspondController;
+@end
