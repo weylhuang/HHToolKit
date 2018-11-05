@@ -297,7 +297,7 @@
 
 @implementation HHNetSpeedDetector
 +(void)load{
-    [[self getInstance] startDetect:@"https://dldir1.qq.com/qqfile/QQforMac/QQ_V6.5.2.dmg"];
+//    [[self getInstance] startDetect:@"https://dldir1.qq.com/qqfile/QQforMac/QQ_V6.5.2.dmg"];
 }
 +(HHNetSpeedDetector*)getInstance{
     static HHNetSpeedDetector* detector = nil;
