@@ -51,8 +51,11 @@ typedef NS_ENUM(NSInteger, ContainerStyle) {
 -(UIView*)hh_withBorderWidth:(double)width color:(UIColor*)color;
 -(UIView*)hh_withCornerRadius:(double)radius;
 -(UIView*)hh_withGradientBackgroundColor:(CGRect)rect colors:(NSArray*)colors;
+-(UIView*)hh_withFullSeperateLine;
+-(UIView*)hh_withSeperateLine:(UIEdgeInsets)edgeInsets;
 @end
 
 @interface UIView (HHHelper)
 -(UIViewController*)hh_correspondController;
+
 @end

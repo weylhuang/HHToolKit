@@ -10,6 +10,9 @@
 #import <arpa/inet.h>
 #import <net/if.h>
 #import "HHMacro.h"
+
+NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notification";
+
 @implementation HHMultipart
 
 @end

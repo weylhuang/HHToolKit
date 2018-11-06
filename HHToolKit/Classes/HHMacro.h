@@ -3,6 +3,7 @@
 
 #define WEAK(object) __weak __typeof(object) weak##object = object;
 #define STRONG(object) __strong __typeof(object) strong##object = object;
+#define EXEC_BLOCK(block, ...) block(__VA_ARGS__);
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -16,6 +17,7 @@
 }] subscribeOn:[RACScheduler schedulerWithPriority:RACSchedulerPriorityHigh]] deliverOn:[RACScheduler mainThreadScheduler]]
 
 
+#define RGB2UIColor(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 
 #import <objc/runtime.h>

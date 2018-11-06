@@ -1,6 +1,8 @@
 #import "UIView+HHToolKit.h"
-#import "Masonry.h"
-
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import <Masonry/Masonry.h>
+#import <HHToolKit/HHToolKit.h>
 @implementation UIView (HHLayout)
 
 - (UIView*)hh_verticalLayoutSubviews:(NSArray*)controlArr {
@@ -325,6 +327,24 @@
     [self.layer addSublayer:gradientLayer];
     return self;
 }
+-(UIView*)hh_withFullSeperateLine{
+    return [self hh_withSeperateLine:UIEdgeInsetsZero];
+}
+
+-(UIView*)hh_withSeperateLine:(UIEdgeInsets)edgeInsets{
+    UIView* sepLine = [[UIView alloc] init];
+    sepLine.backgroundColor = RGB2UIColor(0xe5e5e5);
+    [self addSubview:sepLine];
+    [sepLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self);
+        make.height.equalTo(@(.5f));
+        make.left.equalTo(@(edgeInsets.left));
+        make.right.equalTo(@(-edgeInsets.right));
+    }];
+    
+    return self;
+}
+
 @end
 
 @implementation UIView (HHHelper)
@@ -341,4 +361,6 @@
         return nil;
     }
 }
+
+
 @end
