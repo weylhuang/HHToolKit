@@ -2,12 +2,12 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
-  - HHToolKit (0.1.5):
+  - HHToolKit (0.2.3):
     - FMDB
-    - HHToolKit/ASIHTTPRequest (= 0.1.5)
+    - HHToolKit/ASIHTTPRequest (= 0.2.3)
     - LKDBHelper (= 2.4)
     - Masonry
-  - HHToolKit/ASIHTTPRequest (0.1.5):
+  - HHToolKit/ASIHTTPRequest (0.2.3):
     - FMDB
     - LKDBHelper (= 2.4)
     - Masonry
@@ -33,7 +33,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  HHToolKit: 946685e72b25cad7f1d91b30884061e872f03fc2
+  HHToolKit: 4bde45bfd1de217c02da0996762de23a9efa87af
   LKDBHelper: 1162892ca4ffc28029070d6f40f57b333133f1c4
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
 

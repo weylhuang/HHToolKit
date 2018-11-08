@@ -2,7 +2,7 @@
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 #import <Masonry/Masonry.h>
-#import <HHToolKit/HHToolKit.h>
+#import "HHToolKit.h"
 @implementation UIView (HHLayout)
 
 - (UIView*)hh_verticalLayoutSubviews:(NSArray*)controlArr {
