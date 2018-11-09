@@ -37,6 +37,7 @@
 +(HHNetHelper*)defaultConfig;
 +(void)getRequest:(HHNetHelper*)reqObj;
 +(void)postRequest:(HHNetHelper*)reqObj;
++(void)putRequest:(HHNetHelper*)reqObj;
 +(BOOL)downloadFile:(HHNetHelper*)reqObj destPath:(NSString*)destPath;
 - (HHNetHelper *)refresh;
 + (NSString *) param2String:(NSDictionary*)parameters;

@@ -98,6 +98,41 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     
 }
 
++(void)putRequest:(HHNetHelper*)reqObj{
+    reqObj.method = @"PUT";
+    
+    NSString* urlFullPath = reqObj.path;
+    ASIFormDataRequest *request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:urlFullPath]];
+    [request setRequestMethod:reqObj.method];
+    if (reqObj.requestHeaders!=nil) {
+        [request setRequestHeaders:reqObj.requestHeaders];
+    }
+    if (reqObj.requestCookies!=nil) {
+        [request setRequestCookies:reqObj.requestCookies];
+    }
+    
+    NSString *parameterString = reqObj.postBodyEncode==1? [HHNetHelper param2String:reqObj.parameters]: [reqObj.parameters hh_JSONRepresentation];
+    NSMutableData *parameterData = [[parameterString dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
+    [request setPostBody:parameterData];
+    
+    
+    [request setAllowCompressedResponse:YES];
+    [request setTimeOutSeconds:10];
+    [request startSynchronous];
+    
+    NSError* error = [request error];
+    if (!error) {
+        reqObj.reqSuccess = YES;
+        reqObj.cache = [request responseString];
+        reqObj.responseHeaders = [request responseHeaders];
+        reqObj.responseCookies = [request responseCookies];
+        
+    }else{
+        reqObj.reqSuccess = NO;
+        
+    }
+    
+}
 
 +(HHNetHelper*)defaultConfig{
     HHNetHelper* ret = [[HHNetHelper alloc] init];
