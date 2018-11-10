@@ -16,6 +16,19 @@
     return nil;\
 }] subscribeOn:[RACScheduler schedulerWithPriority:RACSchedulerPriorityHigh]] deliverOn:[RACScheduler mainThreadScheduler]]
 
+#define HHSIGNAL2(funcname)\
+[MBProgressHUD showHUDAddedTo:weakself.view animated:YES];\
+return [[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {\
+id async_func = funcname;\
+[subscriber sendNext:async_func];\
+[subscriber sendCompleted];\
+return nil;\
+}] subscribeOn:[RACScheduler schedulerWithPriority:RACSchedulerPriorityHigh]] deliverOn:[RACScheduler mainThreadScheduler]]\
+flattenMap:^RACStream*(id x) {\
+[MBProgressHUD  hideHUDForView:weakself.view animated:YES];\
+return [RACSignal return:x];\
+}];
+
 
 #define RGB2UIColor(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
