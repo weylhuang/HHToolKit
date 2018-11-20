@@ -300,6 +300,46 @@
 
 @implementation UIView (HHAppearance)
 
+-(void)hh_curveCut:(BOOL)upwardOrDownward amplitude:(double)amplitude foreColor:(UIColor*)foreColor backColor:(UIColor*)backColor y_offset:(double)offset{
+    
+    UIBezierPath* path = [UIBezierPath new];
+    CGRect rect = self.bounds;
+    
+    double stepWidth = rect.size.width / 180.f;
+    // 总是认为上半部分是foreground(凸起的部分？)
+    // offset是距离底边
+    // 坐标原点在左上角
+    [path moveToPoint:CGPointZero];
+    [path addLineToPoint:CGPointMake(0, offset)];
+    
+    for (int i=0; i< 180; i++) {
+        double x = stepWidth * i;
+        double y = offset + sin(M_PI*i/180)*amplitude*(upwardOrDownward?1:-1);
+        [path addLineToPoint:CGPointMake(x, y)];
+    }
+    [path addLineToPoint:CGPointMake(rect.size.width, offset)];
+    [path addLineToPoint:CGPointMake(rect.size.width, 0)];
+    [path closePath];
+    
+    //    [path fill];
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.strokeColor = [UIColor redColor].CGColor;
+    shapeLayer.fillColor = [UIColor redColor].CGColor;
+    //    使用了非透明的fillColor后，CAShapeLayer会自动填充path
+    shapeLayer.lineWidth = 1;
+    shapeLayer.lineJoin = kCALineJoinRound;
+    shapeLayer.lineCap = kCALineCapRound;
+    shapeLayer.path = path.CGPath;
+    
+    CALayer* foreLayer = [CALayer new];
+    foreLayer.mask = shapeLayer;
+    foreLayer.frame = self.layer.frame;
+    foreLayer.backgroundColor = foreColor.CGColor;
+    [self.layer insertSublayer:foreLayer above:self.layer];
+    self.layer.backgroundColor = backColor.CGColor;
+    
+}
+
 -(UIView*)hh_withBackgroundColor:(UIColor*)color{
     self.backgroundColor = color;
     return self;

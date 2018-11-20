@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, ContainerStyle) {
 @end
 
 @interface UIView (HHAppearance)
-
+-(void)hh_curveCut:(BOOL)upwardOrDownward amplitude:(double)amplitude foreColor:(UIColor*)foreColor backColor:(UIColor*)backColor y_offset:(double)offset;
 -(UIView*)hh_withBackgroundColor:(UIColor*)color;
 -(UIView*)hh_withBorderWidth:(double)width color:(UIColor*)color;
 -(UIView*)hh_withCornerRadius:(double)radius;
