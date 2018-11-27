@@ -13,5 +13,6 @@
 #import "HHNetHelper.h"
 #import "HHDebug.h"
 #import "NSDate+HHToolKit.h"
+#import "NSString+HHToolKit.h"
 
 #endif /* HHToolKit_h */
