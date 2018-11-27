@@ -12,6 +12,6 @@
 #import "UIView+HHToolKit.h"
 #import "HHNetHelper.h"
 #import "HHDebug.h"
-
+#import "NSDate+HHToolKit.h"
 
 #endif /* HHToolKit_h */
