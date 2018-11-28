@@ -46,7 +46,7 @@
     return self;
 }
 
-+(UIView*)hh_horizontalLayoutSubviews:(NSArray*)controlArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip weightArr:(NSArray*)weightArr{
+-(UIView*)hh_horizontalLayoutSubviews:(NSArray*)controlArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip weightArr:(NSArray*)weightArr{
     
     UIView* ret = [[UIView alloc] init];
     UIView* lastView = controlArr[0];
@@ -74,14 +74,17 @@
         make.right.equalTo(ret);
     }];
     
-    ret = [ret hh_containerWithEdgeInsets:UIEdgeInsetsMake(vp, hp, vp, hp)];
-    
-    return ret;
+    UIView* v = [ret hh_containerWithEdgeInsets:UIEdgeInsetsMake(vp, hp, vp, hp)];
+    [self addSubview:v];
+    [v mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self);
+    }];
+    return self;
 }
 
 
 
-+(UIView*)hh_horizontalLinearLayoutWith:(NSArray*)viewArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip{
+-(UIView*)hh_horizontalLinearLayoutWith:(NSArray*)viewArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip{
     
     UIView* ret = [[UIView alloc] init];
     
@@ -106,11 +109,13 @@
         make.right.equalTo(ret);
     }];
     
-    ret = [ret hh_containerWithEdgeInsets:UIEdgeInsetsMake(vp, hp, vp, hp)];
-    
-    return ret;
+    UIView* v = [ret hh_containerWithEdgeInsets:UIEdgeInsetsMake(vp, hp, vp, hp)];
+    [self addSubview:v];
+    [v mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self);
+    }];
+    return self;
 }
-
 
 #pragma mark - 松弛wrapper
 

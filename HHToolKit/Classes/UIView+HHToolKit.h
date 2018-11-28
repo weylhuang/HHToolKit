@@ -27,9 +27,8 @@ typedef NS_ENUM(NSInteger, ContainerStyle) {
 
 - (UIView*)hh_verticalLayoutSubviews:(NSArray*)controlArr;
 -(UIView*)hh_verticalLayoutSubviews:(NSArray*)controlArr offsets:(NSArray*)offsetArr;
-+(UIView*)hh_horizontalLayoutSubviews:(NSArray*)controlArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip weightArr:(NSArray*)weightArr;
-+(UIView*)hh_horizontalLinearLayoutWith:(NSArray*)viewArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip;
-
+-(UIView*)hh_horizontalLayoutSubviews:(NSArray*)controlArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip weightArr:(NSArray*)weightArr;
+-(UIView*)hh_horizontalLinearLayoutWith:(NSArray*)viewArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip;
 -(UIView*)hh_containerWithStyle:(ContainerStyle)style;
 -(UIView*)hh_containerWithEdgeInsets:(UIEdgeInsets)insets;
 -(UIView*)hh_container;
