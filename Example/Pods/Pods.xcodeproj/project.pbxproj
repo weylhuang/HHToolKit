@@ -54,6 +54,8 @@
 		6C8E099752F6735356CA3234F98ACB45 /* HHToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CD107776367E7DE59AC55D3883F85A6A /* HHToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7320938121AD6B980091F754 /* NSDate+HHToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7320937F21AD6B980091F754 /* NSDate+HHToolKit.h */; };
 		7320938221AD6B980091F754 /* NSDate+HHToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7320938021AD6B980091F754 /* NSDate+HHToolKit.m */; };
+		73B8A5F821AE493300286944 /* NSAttributedString+HHToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B8A5F621AE493200286944 /* NSAttributedString+HHToolKit.h */; };
+		73B8A5F921AE493300286944 /* NSAttributedString+HHToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B8A5F721AE493300286944 /* NSAttributedString+HHToolKit.m */; };
 		763969650CB007EAC73F89B06F9A87EF /* NSString+HHToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 45516E70F043FC2C58651C429B14A2FC /* NSString+HHToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		773BAF759A7A10CEF20CA57745AABB95 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 8316861349F9573BE76B1FD4B247C73A /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7870BBD9DDAB22FBFC1858CD53B8A1FE /* UIView+HHToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 37ECB2E63D971391B6F01B2AB2E6FA86 /* UIView+HHToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -223,6 +225,8 @@
 		72B3CF408AB9AA8E6F669AFDA5D01FB6 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		7320937F21AD6B980091F754 /* NSDate+HHToolKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDate+HHToolKit.h"; path = "HHToolKit/Classes/NSDate+HHToolKit.h"; sourceTree = "<group>"; };
 		7320938021AD6B980091F754 /* NSDate+HHToolKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDate+HHToolKit.m"; path = "HHToolKit/Classes/NSDate+HHToolKit.m"; sourceTree = "<group>"; };
+		73B8A5F621AE493200286944 /* NSAttributedString+HHToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+HHToolKit.h"; path = "HHToolKit/Classes/NSAttributedString+HHToolKit.h"; sourceTree = "<group>"; };
+		73B8A5F721AE493300286944 /* NSAttributedString+HHToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+HHToolKit.m"; path = "HHToolKit/Classes/NSAttributedString+HHToolKit.m"; sourceTree = "<group>"; };
 		79C860341636E8CEB1B92951FB6D9EE9 /* Pods-HHToolKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HHToolKit_Example.modulemap"; sourceTree = "<group>"; };
 		7F638A25BDA73206F599D56B3F09E11E /* ASIInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = HHToolKit/Classes/ASIHTTPRequest/ASIInputStream.m; sourceTree = "<group>"; };
 		7FE3A547BB31C4924B12291162448F99 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
@@ -475,6 +479,8 @@
 		43170CCF7CD5F4DB8DC6D6C12969B7A8 /* HHToolKit */ = {
 			isa = PBXGroup;
 			children = (
+				73B8A5F621AE493200286944 /* NSAttributedString+HHToolKit.h */,
+				73B8A5F721AE493300286944 /* NSAttributedString+HHToolKit.m */,
 				5AD9F2F1C6D22ABE4D3047BACD8C2675 /* HHDebug.h */,
 				3FE5D6655785EA2D3B7EEADD5361DC73 /* HHDebug.m */,
 				F7EC63DB170ECD88D3CE20DDEFF44BDF /* HHMacro.h */,
@@ -702,6 +708,7 @@
 				DA7B73959B1A448517DECD329073FF2A /* FMDB-umbrella.h in Headers */,
 				517BA94B26A0572AF4B3EE6F8429286C /* FMDB.h in Headers */,
 				32DCC516E0C351A177097ADDCFD4E4B9 /* FMResultSet.h in Headers */,
+				73B8A5F821AE493300286944 /* NSAttributedString+HHToolKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,6 +919,7 @@
 			files = (
 				946A83F9D55E7732CC74EB6C00DF6223 /* FMDatabase.m in Sources */,
 				BF3BE01EA64CE40E470AB4FD107F36FF /* FMDatabaseAdditions.m in Sources */,
+				73B8A5F921AE493300286944 /* NSAttributedString+HHToolKit.m in Sources */,
 				79355BD5499E59326F5C7BC9CC25F497 /* FMDatabasePool.m in Sources */,
 				C422E71E27ABBE6D606E062B525B982B /* FMDatabaseQueue.m in Sources */,
 				15B428705051597975139C2DB212F373 /* FMDB-dummy.m in Sources */,
