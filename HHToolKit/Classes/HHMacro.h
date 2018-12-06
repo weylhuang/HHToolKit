@@ -16,18 +16,30 @@
     return nil;\
 }] subscribeOn:[RACScheduler schedulerWithPriority:RACSchedulerPriorityHigh]] deliverOn:[RACScheduler mainThreadScheduler]]
 
-#define HHSIGNAL2(funcname)\
-[MBProgressHUD showHUDAddedTo:weakself.view animated:YES];\
-return [[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {\
-id async_func = funcname;\
-[subscriber sendNext:async_func];\
+#define HHSIGNALWITHHINT(funcname)\
+[[[[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {\
+MBProgressHUD* hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];\
+[subscriber sendNext:hud];\
 [subscriber sendCompleted];\
 return nil;\
+}] subscribeOn:[RACScheduler mainThreadScheduler]] flattenMap:^RACStream *(id value) {\
+MBProgressHUD* hud = value;\
+return [RACSignal combineLatest:@[[RACSignal return:hud], HHSIGNAL(funcname)]];\
 }] subscribeOn:[RACScheduler schedulerWithPriority:RACSchedulerPriorityHigh]] deliverOn:[RACScheduler mainThreadScheduler]]\
-flattenMap:^RACStream*(id x) {\
-[MBProgressHUD  hideHUDForView:weakself.view animated:YES];\
-return [RACSignal return:x];\
-}];
+flattenMap:^RACStream *(id value) {\
+RACTupleUnpack(MBProgressHUD* hud, id result) = value;\
+[hud hideAnimated:YES];\
+return [RACSignal return:result];\
+}]
+
+#define HHHint(funcname)\
+MBProgressHUD* hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];\
+dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{\
+funcname;\
+dispatch_async(dispatch_get_main_queue(), ^{\
+[hud hideAnimated:YES];\
+});\
+});
 
 
 #define RGB2UIColor(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
