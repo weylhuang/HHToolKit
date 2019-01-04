@@ -14,5 +14,6 @@
 #import "HHDebug.h"
 #import "NSDate+HHToolKit.h"
 #import "NSString+HHToolKit.h"
-
+#import "NSObject+HHToolKit.h"
+#import "NSAttributedString+HHToolKit.h"
 #endif /* HHToolKit_h */

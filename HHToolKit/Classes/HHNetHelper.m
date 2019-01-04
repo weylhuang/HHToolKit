@@ -10,6 +10,7 @@
 #import <arpa/inet.h>
 #import <net/if.h>
 #import "HHMacro.h"
+#import "HHDebug.h"
 
 NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notification";
 
@@ -39,6 +40,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
 
 
 +(void)postRequest:(HHNetHelper*)reqObj{
+    PERFORMANCE_START(post_request)
     reqObj.method = @"POST";
     
     NSString* urlFullPath = reqObj.path;
@@ -56,7 +58,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
             id value = reqObj.parameters[key];
             if ([value isKindOfClass:[HHMultipart class]]) {
                 [request addFile:[value localFilepath]  withFileName:[value remoteFilename] andContentType:[value ContentType] forKey:[value keyname]];
-//                [request addData:value forKey:key];
+                //                [request addData:value forKey:key];
             }else{
                 [request addPostValue:value forKey:key];
             }
@@ -73,9 +75,9 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     [request setAllowCompressedResponse:YES];
     [request setTimeOutSeconds:10];
     [request startSynchronous];
-    
+    PERFORMANCE_END(post_request)
     NSError* error = [request error];
-    if (!error) {
+    if (!error && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
         reqObj.reqSuccess = YES;
         reqObj.cache = [request responseString];
         reqObj.responseHeaders = [request responseHeaders];
@@ -121,7 +123,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     [request startSynchronous];
     
     NSError* error = [request error];
-    if (!error) {
+    if (!error && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
         reqObj.reqSuccess = YES;
         reqObj.cache = [request responseString];
         reqObj.responseHeaders = [request responseHeaders];
@@ -249,6 +251,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         reqObj.isResultFromCache = YES;
         return;
     }else{
+        PERFORMANCE_START(get_request)
         NSString* urlFullPath = reqObj.path;
         if (reqObj.parameters && reqObj.parameters.count > 0) {
             urlFullPath = [urlFullPath stringByAppendingString:[NSString stringWithFormat:@"?%@", [HHNetHelper param2String:reqObj.parameters]]];
@@ -262,24 +265,17 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         [request setAllowCompressedResponse:YES]; //默认是YES
         [request setTimeOutSeconds:reqObj.timeout ? : 5];
         [request startSynchronous];
+        PERFORMANCE_END(get_request)
         
         NSError* error = [request error];
-        if (!error) {
-            NSDictionary *dic = [[request responseString] hh_JSONValue];
-            // dic != nil是为了预防404
-            if (dic != nil) {
-                reqObj.reqSuccess = YES;
-                reqObj.cache =[request responseString];
-                [reqObj resolve];
-                reqObj.isResultFromCache = NO;
-                // 请求成功则更新cache
-                [HHNetHelper updateCache:reqObj];
-                NSLog(@"HHNetHelper cached for %@",reqObj.path);
-            }
-            else{
-                
-                reqObj.reqSuccess = NO;
-            }
+        if (!error && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
+            reqObj.reqSuccess = YES;
+            reqObj.cache =[request responseString];
+            [reqObj resolve];
+            reqObj.isResultFromCache = NO;
+            // 请求成功则更新cache
+            [HHNetHelper updateCache:reqObj];
+            NSLog(@"HHNetHelper cached for %@",reqObj.path);
             
         }else{
             reqObj.reqSuccess = NO;
@@ -289,9 +285,6 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
             [HHNetHelper hitInCacheForFail:reqObj];
         }
         
-        if (!reqObj.reqSuccess) {
-            
-        }
     }
     
     
@@ -335,7 +328,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
 
 @implementation HHNetSpeedDetector
 +(void)load{
-//    [[self getInstance] startDetect:@"https://dldir1.qq.com/qqfile/QQforMac/QQ_V6.5.2.dmg"];
+    //    [[self getInstance] startDetect:@"https://dldir1.qq.com/qqfile/QQforMac/QQ_V6.5.2.dmg"];
 }
 +(HHNetSpeedDetector*)getInstance{
     static HHNetSpeedDetector* detector = nil;
