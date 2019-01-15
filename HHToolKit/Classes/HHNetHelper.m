@@ -87,7 +87,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         [HHNetHelper updateCache:reqObj];
     }else{
         reqObj.reqSuccess = NO;
-        
+        reqObj.cache =[request responseString];
     }
     
     if (!reqObj.reqSuccess && reqObj.bUseCacheWhenFail) {
@@ -131,7 +131,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         
     }else{
         reqObj.reqSuccess = NO;
-        
+        reqObj.cache =[request responseString];
     }
     
 }
@@ -279,6 +279,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
             
         }else{
             reqObj.reqSuccess = NO;
+            reqObj.cache =[request responseString];
         }
         
         if (!reqObj.reqSuccess && reqObj.bUseCacheWhenFail) {
