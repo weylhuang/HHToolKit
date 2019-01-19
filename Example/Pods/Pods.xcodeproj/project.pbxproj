@@ -223,6 +223,8 @@
 		6F7F83EB053E2109EEF9DC034B4DAA9D /* ASIProgressDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = HHToolKit/Classes/ASIHTTPRequest/ASIProgressDelegate.h; sourceTree = "<group>"; };
 		6FCC8004EEF0A7DA3C641E835348A56C /* ASICacheDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = HHToolKit/Classes/ASIHTTPRequest/ASICacheDelegate.h; sourceTree = "<group>"; };
 		72B3CF408AB9AA8E6F669AFDA5D01FB6 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		731F933421F30536007F3895 /* UILabel+HHToolKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UILabel+HHToolKit.m"; path = "HHToolKit/Classes/UILabel+HHToolKit.m"; sourceTree = "<group>"; };
+		731F933521F30536007F3895 /* UILabel+HHToolKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UILabel+HHToolKit.h"; path = "HHToolKit/Classes/UILabel+HHToolKit.h"; sourceTree = "<group>"; };
 		7320937F21AD6B980091F754 /* NSDate+HHToolKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDate+HHToolKit.h"; path = "HHToolKit/Classes/NSDate+HHToolKit.h"; sourceTree = "<group>"; };
 		7320938021AD6B980091F754 /* NSDate+HHToolKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDate+HHToolKit.m"; path = "HHToolKit/Classes/NSDate+HHToolKit.m"; sourceTree = "<group>"; };
 		73B8A5F621AE493200286944 /* NSAttributedString+HHToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+HHToolKit.h"; path = "HHToolKit/Classes/NSAttributedString+HHToolKit.h"; sourceTree = "<group>"; };
@@ -491,6 +493,8 @@
 				1C52A5118818C414D36466AD2452AB9E /* NSObject+HHToolKit.m */,
 				45516E70F043FC2C58651C429B14A2FC /* NSString+HHToolKit.h */,
 				B27EFA7A039EB43C2F68502A4CA4E4CF /* NSString+HHToolKit.m */,
+				731F933521F30536007F3895 /* UILabel+HHToolKit.h */,
+				731F933421F30536007F3895 /* UILabel+HHToolKit.m */,
 				37ECB2E63D971391B6F01B2AB2E6FA86 /* UIView+HHToolKit.h */,
 				98DBE0EFE2C6481B5004271BE9BC8BE8 /* UIView+HHToolKit.m */,
 				7320937F21AD6B980091F754 /* NSDate+HHToolKit.h */,

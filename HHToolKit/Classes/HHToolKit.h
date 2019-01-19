@@ -10,6 +10,7 @@
 
 #import "HHMacro.h"
 #import "UIView+HHToolKit.h"
+#import "UILabel+HHToolKit.h"
 #import "HHNetHelper.h"
 #import "HHDebug.h"
 #import "NSDate+HHToolKit.h"
