@@ -47,6 +47,7 @@
 }
 
 -(UIView*)hh_horizontalLayoutSubviews:(NSArray*)controlArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip weightArr:(NSArray*)weightArr{
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview) withObject:nil];
     
     UIView* ret = [[UIView alloc] init];
     UIView* lastView = controlArr[0];
@@ -85,6 +86,7 @@
 
 
 -(UIView*)hh_horizontalLinearLayoutWith:(NSArray*)viewArr horizontalPadding:(double)hp verticalPadding:(double)vp interPadding:(double)ip{
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview) withObject:nil];
     
     UIView* ret = [[UIView alloc] init];
     
