@@ -77,6 +77,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     [request startSynchronous];
     PERFORMANCE_END(post_request)
     NSError* error = [request error];
+    reqObj.responseCode = request.responseStatusCode;
     if (!error && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
         reqObj.reqSuccess = YES;
         reqObj.cache = [request responseString];
@@ -94,9 +95,6 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         [HHNetHelper hitInCacheForFail:reqObj];
     }
     
-    if (!reqObj.reqSuccess) {
-        
-    }
     
 }
 
@@ -123,6 +121,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     [request startSynchronous];
     
     NSError* error = [request error];
+    reqObj.responseCode = request.responseStatusCode;
     if (!error && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
         reqObj.reqSuccess = YES;
         reqObj.cache = [request responseString];
@@ -133,6 +132,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         reqObj.reqSuccess = NO;
         reqObj.cache =[request responseString];
     }
+    
     
 }
 
@@ -268,6 +268,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         PERFORMANCE_END(get_request)
         
         NSError* error = [request error];
+        reqObj.responseCode = request.responseStatusCode;
         if (!error && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
             reqObj.reqSuccess = YES;
             reqObj.cache =[request responseString];
@@ -281,6 +282,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
             reqObj.reqSuccess = NO;
             reqObj.cache =[request responseString];
         }
+        
         
         if (!reqObj.reqSuccess && reqObj.bUseCacheWhenFail) {
             [HHNetHelper hitInCacheForFail:reqObj];

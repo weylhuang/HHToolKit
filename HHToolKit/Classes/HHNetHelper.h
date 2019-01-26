@@ -18,6 +18,7 @@
 @property (nonatomic,strong) NSDictionary* parameters;
 @property (nonatomic,strong) NSString* method;
 @property (nonatomic,strong) NSString* errInfo;
+@property (nonatomic) NSInteger responseCode;
 @property (nonatomic) double calledDate;
 @property (nonatomic) NSInteger expirePeriod;
 @property (nonatomic) NSInteger timeout;
