@@ -43,8 +43,14 @@ dispatch_async(dispatch_get_main_queue(), ^{\
 
 #define ASYNC_WORK(work_func)\
 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{\
-    work_func\
+work_func;\
 });
+
+#define SIGNAL_TRIGGED_BY(funcname)\
+[self rac_signalForSelector:@selector(funcname)]
+
+#define SIGNAL_DELAY(period)\
+[[RACSignal interval:period onScheduler:[RACScheduler mainThreadScheduler]] take:1]
 
 #define RGB2UIColor(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
