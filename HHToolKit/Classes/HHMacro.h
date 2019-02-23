@@ -47,7 +47,7 @@ work_func;\
 });
 
 #define SIGNAL_TRIGGED_BY(funcname)\
-[self rac_signalForSelector:@selector(funcname)]
+[weakself rac_signalForSelector:@selector(funcname)]
 
 #define SIGNAL_DELAY(period)\
 [[RACSignal interval:period onScheduler:[RACScheduler mainThreadScheduler]] take:1]
