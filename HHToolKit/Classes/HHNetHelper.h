@@ -23,6 +23,7 @@
 @property (nonatomic) NSInteger expirePeriod;
 @property (nonatomic) NSInteger timeout;
 @property (nonatomic) BOOL reqSuccess;
+@property (nonatomic) BOOL networkFail;
 @property (nonatomic, assign) BOOL isResultFromCache;
 @property (nonatomic) BOOL usingMultiform;
 @property (nonatomic) NSInteger postBodyEncode;  // 0: json, 1: form,
