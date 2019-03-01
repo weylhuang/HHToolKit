@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HHToolKit'
-  s.version          = '0.4.1'
+  s.version          = '0.4.2'
   s.summary          = 'A fast app creation toolkit'
 
 # This description is used to generate tags and improve search results.
@@ -41,5 +41,6 @@ s.description      = 'A fast app creation toolkit, which allows you to build com
   s.dependency 'FMDB'
   s.dependency 'LKDBHelper', '2.4'
   s.dependency 'Masonry'
+  s.dependency 'Reachability', '3.2'
   
 end
