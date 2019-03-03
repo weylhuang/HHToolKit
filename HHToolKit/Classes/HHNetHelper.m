@@ -321,10 +321,18 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     
     NSError* error = [request error];
     if (!error) {
-        return YES;
-    }else{
-        return NO;
+        if ([[NSFileManager defaultManager] fileExistsAtPath:destPath]) {
+            NSDictionary *fileDic = [[NSFileManager defaultManager] attributesOfItemAtPath:destPath error:nil];
+            unsigned long long size = [[fileDic objectForKey:NSFileSize] longLongValue];
+            if (size == request.contentLength) {
+                return YES;
+            }else{
+                NSLog(@"download: file size mismatch");
+                [[NSFileManager defaultManager] removeItemAtPath:destPath error:nil];
+            }
+        }
     }
+    return NO;
     
 }
 
