@@ -8,6 +8,15 @@
 #import "HHDebug.h"
 #import <UIKit/UIKit.h>
 @implementation HHDebug
++(void)redirectNSlogToDocumentFolder
+{
+    NSString *logFilePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"ios.log"];
+    [[NSFileManager defaultManager] removeItemAtPath:logFilePath error:nil];
+    
+    freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding],"a+", stdout);
+    freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding],"a+", stderr);
+}
+
 +(UIViewController*)getCorrespondController:(UIView*)view{
     id responder = view.nextResponder;
     while (![responder isKindOfClass: [UIViewController class]] && ![responder isKindOfClass: [UIWindow class]])
