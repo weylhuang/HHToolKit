@@ -80,25 +80,18 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     reqObj.responseCode = request.responseStatusCode;
     if (error != nil) {
         reqObj.networkFail = YES;
-        [HHNetHelper updateCache:reqObj];
     }else if (error == nil && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
         reqObj.reqSuccess = YES;
+        
         reqObj.cache = [request responseString];
         reqObj.responseHeaders = [request responseHeaders];
         reqObj.responseCookies = [request responseCookies];
-        
         reqObj.isResultFromCache = NO;
-        [HHNetHelper updateCache:reqObj];
     }else{
         reqObj.reqSuccess = NO;
         reqObj.cache =[request responseString];
     }
-    
-    if (!reqObj.reqSuccess && reqObj.bUseCacheWhenFail) {
-        [HHNetHelper hitInCacheForFail:reqObj];
-    }
-    
-    
+    [HHNetHelper updateCache:reqObj];
 }
 
 +(void)putRequest:(HHNetHelper*)reqObj{
@@ -127,18 +120,16 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     reqObj.responseCode = request.responseStatusCode;
     if (error != nil) {
         reqObj.networkFail = YES;
-        [HHNetHelper updateCache:reqObj];
     }else if (error == nil && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
         reqObj.reqSuccess = YES;
         reqObj.cache = [request responseString];
         reqObj.responseHeaders = [request responseHeaders];
         reqObj.responseCookies = [request responseCookies];
-        
     }else{
         reqObj.reqSuccess = NO;
         reqObj.cache =[request responseString];
     }
-    
+    [HHNetHelper updateCache:reqObj];
     
 }
 
@@ -149,6 +140,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     ret.expirePeriod = -1;
     ret.parameters = [NSMutableDictionary dictionary];
     ret.reqSuccess = NO;
+    ret.networkFail = NO;
     ret.usingMultiform = NO;
     
     return ret;
@@ -177,9 +169,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     self.responseStruct = [[self.cache hh_JSONValue] valueForKey:self.responseStructKey];
 }
 
-
 +(BOOL)hitInCache:(HHNetHelper*)reqObj{
-    
     NSArray* arr = [HHNetHelper searchWithSQL:[NSString stringWithFormat:@"select * from HHNetHelper where path=\'%@\' and parameters = \'%@\' and method = \'%@\' and reqSuccess = 1", reqObj.path, [reqObj.parameters hh_JSONRepresentation], reqObj.method]];
     if (arr.count > 0) {
         HHNetHelper* tmp = [arr firstObject];
@@ -192,20 +182,8 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     return NO;
 }
 
-+(void)hitInCacheForFail:(HHNetHelper*)reqObj{
-    NSString* query = [NSString stringWithFormat:@"select * from HHNetHelper where path=\'%@\' and parameters = \'%@\' and method = \'%@\' and reqSuccess = 1", reqObj.path, [reqObj.parameters hh_JSONRepresentation], reqObj.method];
-    NSArray* arr = [HHNetHelper searchWithSQL:query];
-    if (arr.count > 0) {
-        HHNetHelper* tmp = [arr firstObject];
-        reqObj.cache = tmp.cache;
-        reqObj.reqSuccess = YES;
-        reqObj.isResultFromCache = YES;
-    }
-}
-
-
 +(void)updateCache:(HHNetHelper*)reqObj{
-    [HHNetHelper deleteWithWhere:[NSString stringWithFormat:@"path=\'%@\' and parameters = \'%@\' and method = \'%@\'", reqObj.path, [reqObj.parameters hh_JSONRepresentation], reqObj.method]];
+    [HHNetHelper deleteWithWhere:[NSString stringWithFormat:@"path=\'%@\' and parameters = \'%@\' and method = \'%@\' and reqSuccess = %@ and networkFail = %@", reqObj.path, [reqObj.parameters hh_JSONRepresentation], reqObj.method, @(reqObj.reqSuccess), @(reqObj.networkFail)]];
     reqObj.calledDate = [[NSDate date] timeIntervalSince1970];
     [reqObj saveToDB];
 }
@@ -277,25 +255,18 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         reqObj.responseCode = request.responseStatusCode;
         if (error != nil) {
             reqObj.networkFail = YES;
-            [HHNetHelper updateCache:reqObj];
         }else if (error == nil && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
             reqObj.reqSuccess = YES;
             reqObj.cache =[request responseString];
             [reqObj resolve];
             reqObj.isResultFromCache = NO;
             // 请求成功则更新cache
-            [HHNetHelper updateCache:reqObj];
             NSLog(@"HHNetHelper cached for %@",reqObj.path);
-            
         }else{
             reqObj.reqSuccess = NO;
             reqObj.cache =[request responseString];
         }
-        
-        
-        if (!reqObj.reqSuccess && reqObj.bUseCacheWhenFail) {
-            [HHNetHelper hitInCacheForFail:reqObj];
-        }
+        [HHNetHelper updateCache:reqObj];
         
     }
     

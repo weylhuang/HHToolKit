@@ -12,7 +12,6 @@
 
 @interface HHNetHelper : NSObject
 
-@property (nonatomic) BOOL bUseCacheWhenFail;
 @property (nonatomic,strong) NSString* cache;
 @property (nonatomic,strong) NSString* path;
 @property (nonatomic,strong) NSDictionary* parameters;
