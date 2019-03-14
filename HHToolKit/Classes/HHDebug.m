@@ -18,12 +18,22 @@ static BOOL debugMode = FALSE;
     return debugMode;
 }
 
++(long long) fileSize:(NSString*) filePath{
+    NSFileManager* manager = [NSFileManager defaultManager];
+    if ([manager fileExistsAtPath:filePath]){
+        return [[manager attributesOfItemAtPath:filePath error:nil] fileSize];
+    }else{
+        return 0;
+    }
+}
 
 +(void)redirectNSlogToDocumentFolder
 {
     NSString *logFilePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"ios.log"];
-    [[NSFileManager defaultManager] removeItemAtPath:logFilePath error:nil];
-    
+    if ([self fileSize:logFilePath] > 1024*1024*200) {
+        [[NSFileManager defaultManager] removeItemAtPath:logFilePath error:nil];
+    }
+
     freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding],"a+", stdout);
     freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding],"a+", stderr);
 }
