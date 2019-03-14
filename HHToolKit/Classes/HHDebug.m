@@ -8,6 +8,17 @@
 #import "HHDebug.h"
 #import <UIKit/UIKit.h>
 @implementation HHDebug
+static BOOL debugMode = FALSE;
++(void)openDebugMode:(BOOL)flag{
+    debugMode = flag;
+}
+
+
++(BOOL)currentDebugMode{
+    return debugMode;
+}
+
+
 +(void)redirectNSlogToDocumentFolder
 {
     NSString *logFilePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"ios.log"];

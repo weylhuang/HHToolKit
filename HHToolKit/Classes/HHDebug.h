@@ -18,6 +18,8 @@ NSLog(@"%s, %.3lf seconds", #name, endTime##name-startTime##name);\
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHDebug : NSObject
++(void)openDebugMode:(BOOL)flag;
++(BOOL)currentDebugMode;
 +(void)redirectNSlogToDocumentFolder;
 +(UIViewController*)getCorrespondController:(UIView*)view;
 +(NSArray *)listFileAtPath:(NSString *)path;
