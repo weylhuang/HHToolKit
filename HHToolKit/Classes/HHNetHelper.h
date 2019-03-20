@@ -47,6 +47,14 @@
 
 @end
 
+@interface HHNetPerformance : NSObject
+@property (nonatomic,strong) NSString* path;
+@property (nonatomic,strong) NSString* method;
+@property (nonatomic) double requestTime;
+@end
+
+
+
 extern NSString* hh_network_speed_detect_notification;
 
 @interface HHNetSpeedDetector : NSObject

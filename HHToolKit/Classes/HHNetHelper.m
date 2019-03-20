@@ -18,6 +18,11 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
 
 @end
 
+@implementation HHNetPerformance
+
+@end
+
+
 @implementation HHNetHelper
 - (id)userGetValueForModel:(LKDBProperty*)property
 {
@@ -76,11 +81,13 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     [request setTimeOutSeconds:10];
     [request startSynchronous];
     PERFORMANCE_END(post_request)
+    NET_PERFORMANCE_LOG(post_request, reqObj)
     NSError* error = [request error];
     reqObj.responseCode = request.responseStatusCode;
     if (error != nil) {
         reqObj.networkFail = YES;
         reqObj.cache = error.debugDescription;
+        NSLog(@"request network fails for post: %@", urlFullPath);
     }else if (error == nil && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
         reqObj.reqSuccess = YES;
         
@@ -88,16 +95,18 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         reqObj.responseHeaders = [request responseHeaders];
         reqObj.responseCookies = [request responseCookies];
         reqObj.isResultFromCache = NO;
+        NSLog(@"HHNetHelper success for post %@",reqObj.path);
     }else{
         reqObj.reqSuccess = NO;
         reqObj.cache =[request responseString];
+        NSLog(@"request backend fails for post: %@, %@", urlFullPath, reqObj.cache);
     }
     [HHNetHelper updateCache:reqObj];
 }
 
 +(void)putRequest:(HHNetHelper*)reqObj{
     reqObj.method = @"PUT";
-    
+    PERFORMANCE_START(put_request)
     NSString* urlFullPath = reqObj.path;
     ASIFormDataRequest *request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:urlFullPath]];
     [request setRequestMethod:reqObj.method];
@@ -116,20 +125,25 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     [request setAllowCompressedResponse:YES];
     [request setTimeOutSeconds:10];
     [request startSynchronous];
+    PERFORMANCE_END(put_request)
+    NET_PERFORMANCE_LOG(put_request, reqObj)
     
     NSError* error = [request error];
     reqObj.responseCode = request.responseStatusCode;
     if (error != nil) {
         reqObj.networkFail = YES;
         reqObj.cache = error.debugDescription;
+        NSLog(@"request network fails for put: %@", urlFullPath);
     }else if (error == nil && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
         reqObj.reqSuccess = YES;
         reqObj.cache = [request responseString];
         reqObj.responseHeaders = [request responseHeaders];
         reqObj.responseCookies = [request responseCookies];
+        NSLog(@"HHNetHelper success for put %@",reqObj.path);
     }else{
         reqObj.reqSuccess = NO;
         reqObj.cache =[request responseString];
+        NSLog(@"request backend fails for put: %@, %@", urlFullPath, reqObj.cache);
     }
     [HHNetHelper updateCache:reqObj];
     
@@ -254,22 +268,24 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         [request setTimeOutSeconds:reqObj.timeout ? : 5];
         [request startSynchronous];
         PERFORMANCE_END(get_request)
-        
+        NET_PERFORMANCE_LOG(get_request, reqObj)
         NSError* error = [request error];
         reqObj.responseCode = request.responseStatusCode;
         if (error != nil) {
             reqObj.networkFail = YES;
             reqObj.cache = error.debugDescription;
+            NSLog(@"request network fails for get: %@", urlFullPath);
         }else if (error == nil && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
             reqObj.reqSuccess = YES;
             reqObj.cache =[request responseString];
             [reqObj resolve];
             reqObj.isResultFromCache = NO;
             // 请求成功则更新cache
-            NSLog(@"HHNetHelper cached for %@",reqObj.path);
+            NSLog(@"HHNetHelper success for get %@",reqObj.path);
         }else{
             reqObj.reqSuccess = NO;
             reqObj.cache =[request responseString];
+            NSLog(@"request backend fails for get: %@, %@", urlFullPath, reqObj.cache);
         }
         [HHNetHelper updateCache:reqObj];
         

@@ -14,6 +14,12 @@ double startTime##name = [NSDate date].timeIntervalSince1970;\
 double endTime##name = [NSDate date].timeIntervalSince1970;\
 NSLog(@"%s, %.3lf seconds", #name, endTime##name-startTime##name);\
 
+#define NET_PERFORMANCE_LOG(name, reqObj)\
+HHNetPerformance* perf = [HHNetPerformance new];\
+perf.path = reqObj.path;\
+perf.method = reqObj.method;\
+perf.requestTime = endTime##name-startTime##name;\
+[perf saveToDB];
 
 NS_ASSUME_NONNULL_BEGIN
 
