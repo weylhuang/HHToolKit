@@ -27,15 +27,12 @@ static BOOL debugMode = FALSE;
     }
 }
 
-+(void)redirectNSlogToDocumentFolder
-{
-    NSString *logFilePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"ios.log"];
-    if ([self fileSize:logFilePath] > 1024*1024*200) {
-        [[NSFileManager defaultManager] removeItemAtPath:logFilePath error:nil];
++(void)listDirectory:(NSString*)path{
+    NSArray* arr = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
+    NSLog(@"files under directory %@", path);
+    for (NSString* file in arr) {
+        NSLog(@"%@",file);
     }
-
-    freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding],"a+", stdout);
-    freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding],"a+", stderr);
 }
 
 +(UIViewController*)getCorrespondController:(UIView*)view{
