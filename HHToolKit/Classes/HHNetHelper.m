@@ -202,7 +202,13 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
 
 +(void)updateCache:(HHNetHelper*)reqObj{
     if (![HHDebug currentDebugMode]) {
-        [HHNetHelper deleteWithWhere:[NSString stringWithFormat:@"path=\'%@\' and parameters = \'%@\' and method = \'%@\' and reqSuccess = %@ and networkFail = %@", reqObj.path, [reqObj.parameters hh_JSONRepresentation], reqObj.method, @(reqObj.reqSuccess), @(reqObj.networkFail)]];
+        NSString* str = [NSString stringWithFormat:@"path=\'%@\' and method = \'%@\' and reqSuccess = %@ and networkFail = %@", reqObj.path, reqObj.method, @(reqObj.reqSuccess), @(reqObj.networkFail)];
+        NSArray* entrys = [HHNetHelper searchWithWhere:str];
+        for (HHNetHelper* config in entrys) {
+            if ([config.parameters isEqualToDictionary:reqObj.parameters]) {
+                [config deleteToDB];
+            }
+        }
     }
     reqObj.calledDate = [[NSDate date] timeIntervalSince1970];
     [reqObj saveToDB];
