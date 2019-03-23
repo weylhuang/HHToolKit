@@ -186,13 +186,15 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
 }
 
 +(BOOL)hitInCache:(HHNetHelper*)reqObj{
-    NSArray* arr = [HHNetHelper searchWithSQL:[NSString stringWithFormat:@"select * from HHNetHelper where path=\'%@\' and parameters = \'%@\' and method = \'%@\' and reqSuccess = 1 order by calledDate desc", reqObj.path, [reqObj.parameters hh_JSONRepresentation], reqObj.method]];
-    if (arr.count > 0) {
-        HHNetHelper* tmp = [arr firstObject];
-        if ([[NSDate date] timeIntervalSinceDate:[NSDate dateWithTimeIntervalSince1970:tmp.calledDate ] ] < reqObj.expirePeriod) {
-            reqObj.cache = tmp.cache;
-            reqObj.reqSuccess = YES;
-            return YES;
+    NSString* str = [NSString stringWithFormat:@"select * from HHNetHelper where path=\'%@\' and method = \'%@\' and reqSuccess = 1 order by calledDate desc", reqObj.path, reqObj.method];
+    NSArray* arr = [HHNetHelper searchWithSQL:str];
+    for (HHNetHelper* tmp in arr) {
+        if ([[tmp.parameters hh_JSONRepresentation] isEqualToString:[reqObj.parameters hh_JSONRepresentation]]) {
+            if ([[NSDate date] timeIntervalSinceDate:[NSDate dateWithTimeIntervalSince1970:tmp.calledDate ] ] < reqObj.expirePeriod) {
+                reqObj.cache = tmp.cache;
+                reqObj.reqSuccess = YES;
+                return YES;
+            }
         }
     }
     return NO;
