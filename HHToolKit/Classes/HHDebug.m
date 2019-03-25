@@ -7,6 +7,7 @@
 
 #import "HHDebug.h"
 #import <UIKit/UIKit.h>
+#import <sys/sysctl.h>
 @implementation HHDebug
 static BOOL debugMode = FALSE;
 +(void)openDebugMode:(BOOL)flag{
@@ -16,6 +17,19 @@ static BOOL debugMode = FALSE;
 
 +(BOOL)currentDebugMode{
     return debugMode;
+}
+
++ (NSString *)platform{
+    size_t size;
+    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
+    char *machine = (char *)malloc(size);
+    if (machine == NULL) {
+        return nil;
+    }
+    sysctlbyname("hw.machine", machine, &size, NULL, 0);
+    NSString *platform = [NSString stringWithCString:machine encoding:NSUTF8StringEncoding];
+    free(machine);
+    return platform;
 }
 
 +(long long) fileSize:(NSString*) filePath{

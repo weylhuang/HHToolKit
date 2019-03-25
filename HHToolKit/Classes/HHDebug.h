@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HHDebug : NSObject
 +(void)openDebugMode:(BOOL)flag;
 +(BOOL)currentDebugMode;
++ (NSString *)platform;
 +(long long) fileSize:(NSString*) filePath;
 +(void)listDirectory:(NSString*)path;
 +(UIViewController*)getCorrespondController:(UIView*)view;
