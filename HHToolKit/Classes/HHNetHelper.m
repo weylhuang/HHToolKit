@@ -19,7 +19,10 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
 @end
 
 @implementation HHNetPerformance
-
++(NSArray*)getAPIStatistics{
+    NSArray* arr = [HHNetPerformance searchWithSQL:@"select path, method, AVG(requestTime) as avgRequestTime, MAX(requestTime) as maxRequestTime from HHNetPerformance group by path,method"];
+    return arr;
+}
 @end
 
 
