@@ -83,8 +83,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     [request setAllowCompressedResponse:YES];
     [request setTimeOutSeconds:10];
     [request startSynchronous];
-    PERFORMANCE_END(post_request)
-    NET_PERFORMANCE_LOG(post_request, reqObj)
+    
     NSError* error = [request error];
     reqObj.responseCode = request.responseStatusCode;
     if (error != nil) {
@@ -105,6 +104,8 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         NSLog(@"request backend fails for post: %@, %@", urlFullPath, reqObj.cache);
     }
     [HHNetHelper updateCache:reqObj];
+    PERFORMANCE_END(post_request)
+    NET_PERFORMANCE_LOG(post_request, reqObj)
 }
 
 +(void)putRequest:(HHNetHelper*)reqObj{
@@ -128,8 +129,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     [request setAllowCompressedResponse:YES];
     [request setTimeOutSeconds:10];
     [request startSynchronous];
-    PERFORMANCE_END(put_request)
-    NET_PERFORMANCE_LOG(put_request, reqObj)
+    
     
     NSError* error = [request error];
     reqObj.responseCode = request.responseStatusCode;
@@ -149,7 +149,8 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         NSLog(@"request backend fails for put: %@, %@", urlFullPath, reqObj.cache);
     }
     [HHNetHelper updateCache:reqObj];
-    
+    PERFORMANCE_END(put_request)
+    NET_PERFORMANCE_LOG(put_request, reqObj)
 }
 
 +(HHNetHelper*)defaultConfig{
@@ -278,8 +279,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         [request setAllowCompressedResponse:YES]; //默认是YES
         [request setTimeOutSeconds:reqObj.timeout ? : 5];
         [request startSynchronous];
-        PERFORMANCE_END(get_request)
-        NET_PERFORMANCE_LOG(get_request, reqObj)
+        
         NSError* error = [request error];
         reqObj.responseCode = request.responseStatusCode;
         if (error != nil) {
@@ -299,7 +299,8 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
             NSLog(@"request backend fails for get: %@, %@", urlFullPath, reqObj.cache);
         }
         [HHNetHelper updateCache:reqObj];
-        
+        PERFORMANCE_END(get_request)
+        NET_PERFORMANCE_LOG(get_request, reqObj)
     }
     
     
