@@ -51,7 +51,10 @@
 @property (nonatomic,strong) NSString* path;
 @property (nonatomic,strong) NSString* method;
 @property (nonatomic,strong) NSDictionary* requestHeaders;
-@property (nonatomic) double requestTime;
+@property (nonatomic) double duration;
+@property (nonatomic) BOOL reqSuccess;
+@property (nonatomic) NSInteger responseCode;
+@property (nonatomic) double calledDate;
 @end
 
 

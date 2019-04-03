@@ -18,8 +18,11 @@ NSLog(@"%s, %.3lf seconds", #name, endTime##name-startTime##name);\
 HHNetPerformance* perf = [HHNetPerformance new];\
 perf.path = reqObj.path;\
 perf.method = reqObj.method;\
+perf.responseCode = reqObj.responseCode;\
+perf.calledDate = reqObj.calledDate;\
+perf.reqSuccess = reqObj.reqSuccess;\
 perf.requestHeaders = reqObj.requestHeaders;\
-perf.requestTime = endTime##name-startTime##name;\
+perf.duration = endTime##name-startTime##name;\
 [perf saveToDB];
 
 NS_ASSUME_NONNULL_BEGIN
