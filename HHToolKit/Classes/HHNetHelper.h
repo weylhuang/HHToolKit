@@ -50,6 +50,7 @@
 @interface HHNetPerformance : NSObject
 @property (nonatomic,strong) NSString* path;
 @property (nonatomic,strong) NSString* method;
+@property (nonatomic,strong) NSDictionary* requestHeaders;
 @property (nonatomic) double requestTime;
 @end
 

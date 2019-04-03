@@ -18,6 +18,7 @@ NSLog(@"%s, %.3lf seconds", #name, endTime##name-startTime##name);\
 HHNetPerformance* perf = [HHNetPerformance new];\
 perf.path = reqObj.path;\
 perf.method = reqObj.method;\
+perf.requestHeaders = reqObj.requestHeaders;\
 perf.requestTime = endTime##name-startTime##name;\
 [perf saveToDB];
 
