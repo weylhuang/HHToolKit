@@ -51,9 +51,6 @@
 @property (nonatomic,strong) NSString* path;
 @property (nonatomic,strong) NSString* method;
 @property (nonatomic) double requestTime;
-@property (nonatomic) double avgRequestTime;
-@property (nonatomic) double maxRequestTime;
-+(NSArray*)getAPIStatistics;
 @end
 
 
