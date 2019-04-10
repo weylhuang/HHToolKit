@@ -193,16 +193,34 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     NSString* str = [NSString stringWithFormat:@"select * from HHNetHelper where path=\'%@\' and method = \'%@\' and reqSuccess = 1 order by calledDate desc", reqObj.path, reqObj.method];
     NSArray* arr = [HHNetHelper searchWithSQL:str];
     for (HHNetHelper* tmp in arr) {
-        if ([[tmp.parameters hh_JSONRepresentation] isEqualToString:[reqObj.parameters hh_JSONRepresentation]]) {
+        if ([tmp.parameters isEqualToDictionary:reqObj.parameters]) {
             if ([[NSDate date] timeIntervalSinceDate:[NSDate dateWithTimeIntervalSince1970:tmp.calledDate ] ] < reqObj.expirePeriod) {
                 reqObj.cache = tmp.cache;
                 reqObj.reqSuccess = YES;
+                reqObj.networkFail = NO;
+                reqObj.isResultFromCache = YES;
                 return YES;
             }
         }
     }
     return NO;
 }
+
++(BOOL)hitInCacheForFailReq:(HHNetHelper*)reqObj{
+    NSString* str = [NSString stringWithFormat:@"select * from HHNetHelper where path=\'%@\' and method = \'%@\' and reqSuccess = 1 order by calledDate desc", reqObj.path, reqObj.method];
+    NSArray* arr = [HHNetHelper searchWithSQL:str];
+    for (HHNetHelper* tmp in arr) {
+        if ([tmp.parameters isEqualToDictionary:reqObj.parameters]) {
+            reqObj.cache = tmp.cache;
+            reqObj.reqSuccess = YES;
+            reqObj.networkFail = NO;
+            reqObj.isResultFromCache = YES;
+            return YES;
+        }
+    }
+    return NO;
+}
+
 
 +(void)updateCache:(HHNetHelper*)reqObj{
     if (![HHDebug currentDebugMode]) {
@@ -262,7 +280,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         // 命中，reqObj中信息已更新可直接返回
         NSLog(@"HHNetHelper hit! for %@",reqObj.path);
         [reqObj resolve];
-        reqObj.isResultFromCache = YES;
+        
         return;
     }else{
         PERFORMANCE_START(get_request)
@@ -301,15 +319,12 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         [HHNetHelper updateCache:reqObj];
         PERFORMANCE_END(get_request)
         NET_PERFORMANCE_LOG(get_request, reqObj)
+        if (reqObj.reqSuccess == NO) {
+            [self hitInCacheForFailReq:reqObj];
+        }
     }
-    
-    
     return;
-    
 }
-
-
-
 
 
 +(BOOL)downloadFile:(HHNetHelper*)reqObj destPath:(NSString*)destPath{

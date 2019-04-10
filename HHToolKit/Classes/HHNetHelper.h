@@ -24,6 +24,7 @@
 @property (nonatomic) BOOL reqSuccess;
 @property (nonatomic) BOOL networkFail;
 @property (nonatomic, assign) BOOL isResultFromCache;
+@property (nonatomic) BOOL useCacheForGetWhenFail;
 @property (nonatomic) BOOL usingMultiform;
 @property (nonatomic) NSInteger postBodyEncode;  // 0: json, 1: form,
 @property (nonatomic,strong) NSDictionary* responseHeaders;
