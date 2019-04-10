@@ -319,7 +319,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         [HHNetHelper updateCache:reqObj];
         PERFORMANCE_END(get_request)
         NET_PERFORMANCE_LOG(get_request, reqObj)
-        if (reqObj.reqSuccess == NO) {
+        if (reqObj.reqSuccess == NO && reqObj.useCacheForGetWhenFail) {
             [self hitInCacheForFailReq:reqObj];
         }
     }
