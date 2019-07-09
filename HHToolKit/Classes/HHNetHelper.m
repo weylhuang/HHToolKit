@@ -48,41 +48,54 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
 
 
 +(void)postRequest:(HHNetHelper*)reqObj{
+    
     PERFORMANCE_START(post_request)
     reqObj.method = @"POST";
     
+    
     NSString* urlFullPath = reqObj.path;
-    ASIFormDataRequest *request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:urlFullPath]];
-    if (reqObj.requestHeaders!=nil) {
-        [request setRequestHeaders:reqObj.requestHeaders];
-    }
-    if (reqObj.requestCookies!=nil) {
-        [request setRequestCookies:reqObj.requestCookies];
-    }
+    ASIFormDataRequest *request = nil;
     
-    if (reqObj.usingMultiform) {
-        
-        for (NSString* key in reqObj.parameters.allKeys) {
-            id value = reqObj.parameters[key];
-            if ([value isKindOfClass:[HHMultipart class]]) {
-                [request addFile:[value localFilepath]  withFileName:[value remoteFilename] andContentType:[value ContentType] forKey:[value keyname]];
-                //                [request addData:value forKey:key];
-            }else{
-                [request addPostValue:value forKey:key];
-            }
+    for (int i=0; i<reqObj.retryCount+1; i++) {
+        startTimepost_request = [[NSDate date] timeIntervalSince1970];
+        request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:urlFullPath]];
+        if (reqObj.requestHeaders!=nil) {
+            [request setRequestHeaders:reqObj.requestHeaders];
         }
-        [request setPostFormat:ASIMultipartFormDataPostFormat];
-    }else{
-        NSString *parameterString = reqObj.postBodyEncode==1? [HHNetHelper param2String:reqObj.parameters]: [reqObj.parameters hh_JSONRepresentation];
-        NSMutableData *parameterData = [[parameterString dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
-        [request setPostBody:parameterData];
+        if (reqObj.requestCookies!=nil) {
+            [request setRequestCookies:reqObj.requestCookies];
+        }
         
+        if (reqObj.usingMultiform) {
+            
+            for (NSString* key in reqObj.parameters.allKeys) {
+                id value = reqObj.parameters[key];
+                if ([value isKindOfClass:[HHMultipart class]]) {
+                    [request addFile:[value localFilepath]  withFileName:[value remoteFilename] andContentType:[value ContentType] forKey:[value keyname]];
+                    //                [request addData:value forKey:key];
+                }else{
+                    [request addPostValue:value forKey:key];
+                }
+            }
+            [request setPostFormat:ASIMultipartFormDataPostFormat];
+        }else{
+            NSString *parameterString = reqObj.postBodyEncode==1? [HHNetHelper param2String:reqObj.parameters]: [reqObj.parameters hh_JSONRepresentation];
+            NSMutableData *parameterData = [[parameterString dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
+            [request setPostBody:parameterData];
+            
+        }
+        [request setAllowCompressedResponse:YES];
+        [request setTimeOutSeconds:10];
+        [request startSynchronous];
+        if ([request error] == nil) {
+            NSLog(@"fullpath: %@, %dth time request success", urlFullPath, i+1);
+            break;
+        }else{
+            NSLog(@"fullpath: %@, %dth time request fail, error: %@", urlFullPath, i+1, [request error]);
+            [NSThread sleepForTimeInterval:20];
+        }
     }
     
-    
-    [request setAllowCompressedResponse:YES];
-    [request setTimeOutSeconds:10];
-    [request startSynchronous];
     
     NSError* error = [request error];
     reqObj.responseCode = request.responseStatusCode;
@@ -162,6 +175,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     ret.reqSuccess = NO;
     ret.networkFail = NO;
     ret.usingMultiform = NO;
+    ret.retryCount = 0;
     
     return ret;
     
@@ -288,15 +302,26 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         if (reqObj.parameters && reqObj.parameters.count > 0) {
             urlFullPath = [urlFullPath stringByAppendingString:[NSString stringWithFormat:@"?%@", [HHNetHelper param2String:reqObj.parameters]]];
         }
-        NSLog(@"fullpath: %@", urlFullPath);
-        ASIHTTPRequest *request = [[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:urlFullPath]];
-        if (reqObj.requestHeaders!=nil) {
-            [request setRequestHeaders:reqObj.requestHeaders];
+        ASIHTTPRequest *request = nil;
+        for (int i=0; i<reqObj.retryCount+1; i++) {
+            startTimeget_request = [[NSDate date] timeIntervalSince1970];
+            request = [[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:urlFullPath]];
+            if (reqObj.requestHeaders!=nil) {
+                [request setRequestHeaders:reqObj.requestHeaders];
+            }
+            
+            [request setAllowCompressedResponse:YES]; //默认是YES
+            [request setTimeOutSeconds:reqObj.timeout ? : 5];
+            [request startSynchronous];
+            
+            if ([request error] == nil) {
+                NSLog(@"fullpath: %@, %dth time request success", urlFullPath, i+1);
+                break;
+            }else{
+                NSLog(@"fullpath: %@, %dth time request fail, error: %@", urlFullPath, i+1, [request error]);
+                [NSThread sleepForTimeInterval:20];
+            }
         }
-        
-        [request setAllowCompressedResponse:YES]; //默认是YES
-        [request setTimeOutSeconds:reqObj.timeout ? : 5];
-        [request startSynchronous];
         
         NSError* error = [request error];
         reqObj.responseCode = request.responseStatusCode;

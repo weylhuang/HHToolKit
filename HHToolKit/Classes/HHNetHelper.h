@@ -21,6 +21,7 @@
 @property (nonatomic) double calledDate;
 @property (nonatomic) NSInteger expirePeriod;
 @property (nonatomic) NSInteger timeout;
+@property (nonatomic) NSInteger retryCount;
 @property (nonatomic) BOOL reqSuccess;
 @property (nonatomic) BOOL networkFail;
 @property (nonatomic, assign) BOOL isResultFromCache;
