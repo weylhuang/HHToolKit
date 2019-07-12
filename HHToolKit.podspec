@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HHToolKit'
-  s.version          = '0.6.1'
+  s.version          = '0.6.2'
   s.summary          = 'A fast app creation toolkit'
 
 # This description is used to generate tags and improve search results.
