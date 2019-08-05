@@ -98,6 +98,9 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     
     
     NSError* error = [request error];
+    if (error.code == ASIAuthenticationErrorType) {
+        error = nil;
+    }
     reqObj.responseCode = request.responseStatusCode;
     if (error != nil) {
         reqObj.networkFail = YES;
@@ -145,6 +148,9 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     
     
     NSError* error = [request error];
+    if (error.code == ASIAuthenticationErrorType) {
+        error = nil;
+    }
     reqObj.responseCode = request.responseStatusCode;
     if (error != nil) {
         reqObj.networkFail = YES;
@@ -324,6 +330,9 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         }
         
         NSError* error = [request error];
+        if (error.code == ASIAuthenticationErrorType) {
+            error = nil;
+        }
         reqObj.responseCode = request.responseStatusCode;
         if (error != nil) {
             reqObj.networkFail = YES;
