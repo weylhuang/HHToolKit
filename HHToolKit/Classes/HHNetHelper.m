@@ -11,6 +11,7 @@
 #import <net/if.h>
 #import "HHMacro.h"
 #import "HHDebug.h"
+#import <Reachability.h>
 
 NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notification";
 
