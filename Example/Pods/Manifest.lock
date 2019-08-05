@@ -2,18 +2,21 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
-  - HHToolKit (0.2.3):
+  - HHToolKit (0.6.3):
     - FMDB
-    - HHToolKit/ASIHTTPRequest (= 0.2.3)
+    - HHToolKit/ASIHTTPRequest (= 0.6.3)
     - LKDBHelper (= 2.4)
     - Masonry
-  - HHToolKit/ASIHTTPRequest (0.2.3):
+    - Reachability (= 3.2)
+  - HHToolKit/ASIHTTPRequest (0.6.3):
     - FMDB
     - LKDBHelper (= 2.4)
     - Masonry
+    - Reachability (= 3.2)
   - LKDBHelper (2.4):
     - FMDB
   - Masonry (0.6.3)
+  - Reachability (3.2)
 
 DEPENDENCIES:
   - FMDB (= 2.6.2)
@@ -26,6 +29,7 @@ SPEC REPOS:
     - FMDB
     - LKDBHelper
     - Masonry
+    - Reachability
 
 EXTERNAL SOURCES:
   HHToolKit:
@@ -33,10 +37,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  HHToolKit: 4bde45bfd1de217c02da0996762de23a9efa87af
+  HHToolKit: a13d40a973d58c3ac87393f054773ed868a28208
   LKDBHelper: 1162892ca4ffc28029070d6f40f57b333133f1c4
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
 PODFILE CHECKSUM: c093a7f491c7e66aa70d02ea8f62cd30a3838da8
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.3

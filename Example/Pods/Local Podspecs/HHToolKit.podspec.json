@@ -1,6 +1,6 @@
 {
   "name": "HHToolKit",
-  "version": "0.2.3",
+  "version": "0.6.3",
   "summary": "A fast app creation toolkit",
   "description": "A fast app creation toolkit, which allows you to build complicated UI in short time.",
   "homepage": "https://github.com/weylhuang/HHToolKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/weylhuang/HHToolKit.git",
-    "tag": "0.2.3"
+    "tag": "0.6.3"
   },
   "platforms": {
     "ios": "8.0"
@@ -32,6 +32,9 @@
     ],
     "Masonry": [
 
+    ],
+    "Reachability": [
+      "3.2"
     ]
   },
   "subspecs": [
