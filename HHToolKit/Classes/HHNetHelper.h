@@ -57,6 +57,8 @@
 @property (nonatomic) BOOL reqSuccess;
 @property (nonatomic) NSInteger responseCode;
 @property (nonatomic) double calledDate;
+@property (nonatomic,strong) NSString* reachability;
+@property (nonatomic,strong) NSString* error;
 @end
 
 

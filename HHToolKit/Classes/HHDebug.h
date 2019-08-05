@@ -23,6 +23,10 @@ perf.calledDate = reqObj.calledDate;\
 perf.reqSuccess = reqObj.reqSuccess;\
 perf.requestHeaders = reqObj.requestHeaders;\
 perf.duration = endTime##name-startTime##name;\
+perf.reachability = [[Reachability reachabilityForInternetConnection] currentReachabilityString];\
+if (error != nil) {\
+perf.error = [NSString stringWithFormat:@"%@ | %@",error.userInfo[@"NSLocalizedDescription"], [error.userInfo[@"NSUnderlyingError"] localizedDescription]];\
+}\
 [perf saveToDB];
 
 NS_ASSUME_NONNULL_BEGIN
