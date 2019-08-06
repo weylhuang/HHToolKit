@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HHToolKit'
-  s.version          = '0.6.3'
+  s.version          = '0.6.4'
   s.summary          = 'A fast app creation toolkit'
 
 # This description is used to generate tags and improve search results.
@@ -35,6 +35,8 @@ s.description      = 'A fast app creation toolkit, which allows you to build com
       sp.requires_arc = false
       sp.source_files = non_arc_files
   end
+  
+  s.frameworks = 'CoreTelephony'
 
 
   s.source_files = ['HHToolKit/Classes/**/*','HHToolKit/Classes/*']
