@@ -36,7 +36,7 @@
 @property (nonatomic, copy) NSString* responseStructKey;
 
 
-
++ (NSString *)getNetworkType;
 +(HHNetHelper*)defaultConfig;
 +(void)getRequest:(HHNetHelper*)reqObj;
 +(void)postRequest:(HHNetHelper*)reqObj;
