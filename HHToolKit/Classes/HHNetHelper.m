@@ -63,15 +63,15 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
             CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
             NSString *currentStatus = info.currentRadioAccessTechnology;
             if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyGPRS"]) {
-                netconnType = @"GPRS";
+                netconnType = @"2G";
             }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyEdge"]) {
-                netconnType = @"2.75G EDGE";
+                netconnType = @"2G";
             }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyWCDMA"]){
                 netconnType = @"3G";
             }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyHSDPA"]){
-                netconnType = @"3.5G HSDPA";
+                netconnType = @"3G";
             }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyHSUPA"]){
-                netconnType = @"3.5G HSUPA";
+                netconnType = @"3G";
             }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyCDMA1x"]){
                 netconnType = @"2G";
             }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORev0"]){
@@ -81,7 +81,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
             }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyCDMAEVDORevB"]){
                 netconnType = @"3G";
             }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyeHRPD"]){
-                netconnType = @"HRPD";
+                netconnType = @"3G";
             }else if ([currentStatus isEqualToString:@"CTRadioAccessTechnologyLTE"]){
                 netconnType = @"4G";
             }else{
@@ -141,7 +141,10 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
             break;
         }else{
             NSLog(@"fullpath: %@, %dth time request fail, error: %@", urlFullPath, i+1, [request error]);
-            [NSThread sleepForTimeInterval:20];
+            if (i < reqObj.retryCount) {
+                [NSThread sleepForTimeInterval:20];
+            }
+            
         }
     }
     
@@ -374,7 +377,9 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
                 break;
             }else{
                 NSLog(@"fullpath: %@, %dth time request fail, error: %@", urlFullPath, i+1, [request error]);
-                [NSThread sleepForTimeInterval:20];
+                if (i < reqObj.retryCount) {
+                    [NSThread sleepForTimeInterval:20];
+                }
             }
         }
         
@@ -424,14 +429,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     NSError* error = [request error];
     if (!error) {
         if ([[NSFileManager defaultManager] fileExistsAtPath:destPath]) {
-            NSDictionary *fileDic = [[NSFileManager defaultManager] attributesOfItemAtPath:destPath error:nil];
-            unsigned long long size = [[fileDic objectForKey:NSFileSize] longLongValue];
-            if (size == request.contentLength) {
-                return YES;
-            }else{
-                NSLog(@"download: file size mismatch");
-                [[NSFileManager defaultManager] removeItemAtPath:destPath error:nil];
-            }
+            return YES;
         }
     }
     return NO;
