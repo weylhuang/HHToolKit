@@ -32,6 +32,30 @@ static BOOL debugMode = FALSE;
     return platform;
 }
 
++(bool)deleteDirectory:(NSString*)path{
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSError *error = nil;
+    for (NSString *file in [fm contentsOfDirectoryAtPath:path error:&error]) {
+        BOOL isDir;
+        NSString* absolutePath = [path stringByAppendingPathComponent:file];
+        [[NSFileManager defaultManager] fileExistsAtPath:absolutePath isDirectory:&isDir];
+        BOOL success = false;
+        if (isDir) {
+            success = [HHDebug deleteDirectory:absolutePath];
+            NSLog(@"HHDebug: delete dir %@ %d",absolutePath, success);
+        }else{
+            success = [fm removeItemAtPath:absolutePath error:&error];
+            //            NSLog(@"HHDebug: delete file %@ %d",absolutePath, success);
+        }
+        
+        if (!success) {
+            //            NSLog(@"HHDebug: delete file %@ fail", file);
+            return false;
+        }
+    }
+    return true;
+}
+
 +(long long) fileSize:(NSString*) filePath{
     NSFileManager* manager = [NSFileManager defaultManager];
     if ([manager fileExistsAtPath:filePath]){

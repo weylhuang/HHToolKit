@@ -36,6 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)openDebugMode:(BOOL)flag;
 +(BOOL)currentDebugMode;
 + (NSString *)platform;
++(bool)deleteDirectory:(NSString*)path;
 +(long long) fileSize:(NSString*) filePath;
 +(void)listDirectory:(NSString*)path;
 +(UIViewController*)getCorrespondController:(UIView*)view;
