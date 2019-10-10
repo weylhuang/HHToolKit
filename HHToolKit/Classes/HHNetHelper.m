@@ -369,7 +369,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
             }
             
             [request setAllowCompressedResponse:YES]; //默认是YES
-            [request setTimeOutSeconds:reqObj.timeout ? : 5];
+            [request setTimeOutSeconds:reqObj.timeout ? : 10];
             [request startSynchronous];
             
             if ([request error] == nil || [request error].code == ASIAuthenticationErrorType) {
