@@ -432,6 +432,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
             return YES;
         }
     }
+    NSLog(@"HHNetHelper, download fail: %@, error: %@", urlFullPath, error);
     return NO;
     
 }
