@@ -264,6 +264,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
 +(BOOL)hitInCache:(HHNetHelper*)reqObj{
     NSString* str = [NSString stringWithFormat:@"select * from HHNetHelper where path=\'%@\' and method = \'%@\' and reqSuccess = 1 order by calledDate desc", reqObj.path, reqObj.method];
     NSArray* arr = [HHNetHelper searchWithSQL:str];
+    NSLog(@"total %ld records in db for %@", arr.count, reqObj.path);
     for (HHNetHelper* tmp in arr) {
         if ([tmp.parameters isEqualToDictionary:reqObj.parameters]) {
             if ([[NSDate date] timeIntervalSinceDate:[NSDate dateWithTimeIntervalSince1970:tmp.calledDate ] ] < reqObj.expirePeriod) {
@@ -281,6 +282,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
 +(BOOL)hitInCacheForFailReq:(HHNetHelper*)reqObj{
     NSString* str = [NSString stringWithFormat:@"select * from HHNetHelper where path=\'%@\' and method = \'%@\' and reqSuccess = 1 order by calledDate desc", reqObj.path, reqObj.method];
     NSArray* arr = [HHNetHelper searchWithSQL:str];
+    NSLog(@"total %ld records in db for %@", arr.count, reqObj.path);
     for (HHNetHelper* tmp in arr) {
         if ([tmp.parameters isEqualToDictionary:reqObj.parameters]) {
             reqObj.cache = tmp.cache;
@@ -298,6 +300,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     if (![HHDebug currentDebugMode]) {
         NSString* str = [NSString stringWithFormat:@"path=\'%@\' and method = \'%@\' and reqSuccess = %@ and networkFail = %@", reqObj.path, reqObj.method, @(reqObj.reqSuccess), @(reqObj.networkFail)];
         NSArray* entrys = [HHNetHelper searchWithWhere:str];
+        NSLog(@"total %ld records in db for %@", entrys.count, reqObj.path);
         for (HHNetHelper* config in entrys) {
             if ([config.parameters isEqualToDictionary:reqObj.parameters]) {
                 [config deleteToDB];
