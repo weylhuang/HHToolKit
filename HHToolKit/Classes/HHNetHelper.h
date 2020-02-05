@@ -11,6 +11,7 @@
 
 
 @interface HHNetHelper : NSObject
+@property (nonatomic, copy) id (^postProcessBlock)(NSDictionary*);
 
 @property (nonatomic,strong) NSString* cache;
 @property (nonatomic,strong) NSString* path;
@@ -47,6 +48,8 @@
 -(BOOL)success;
 -(id)result;
 
+-(HHNetHelper*)setUrl:(NSString *)path;
+-(HHNetHelper*)setHttpMethod:(NSString *)method;
 @end
 
 @interface HHNetPerformance : NSObject

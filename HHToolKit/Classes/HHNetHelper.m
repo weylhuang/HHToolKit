@@ -96,6 +96,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     return netconnType;
 }
 
+
 +(void)postRequest:(HHNetHelper*)reqObj{
     
     PERFORMANCE_START(post_request)
@@ -238,6 +239,16 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     return ret;
     
     
+}
+
+-(HHNetHelper*)setUrl:(NSString *)path{
+    self.path = path;
+    return self;
+}
+
+-(HHNetHelper*)setHttpMethod:(NSString *)method{
+    self.method = method;
+    return self;
 }
 
 -(BOOL)success{
