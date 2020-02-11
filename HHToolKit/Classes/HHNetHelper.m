@@ -251,6 +251,12 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     return self;
 }
 
+-(HHNetHelper*)setHttpParameters:(NSDictionary *)params{
+    self.parameters = params;
+    return self;
+}
+
+
 -(BOOL)success{
     if (self.reqSuccess) {
         NSInteger result = [[[self.cache hh_JSONValue] valueForKey:@"res"] integerValue];
@@ -441,11 +447,12 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     [request startSynchronous];
     
     NSError* error = [request error];
-    if (!error) {
+    if (!error && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
         if ([[NSFileManager defaultManager] fileExistsAtPath:destPath]) {
             return YES;
         }
     }
+    [[NSFileManager defaultManager] removeItemAtPath:destPath error:nil];
     NSLog(@"HHNetHelper, download fail: %@, error: %@", urlFullPath, error);
     return NO;
     

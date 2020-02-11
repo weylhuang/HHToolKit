@@ -50,6 +50,7 @@
 
 -(HHNetHelper*)setUrl:(NSString *)path;
 -(HHNetHelper*)setHttpMethod:(NSString *)method;
+-(HHNetHelper*)setHttpParameters:(NSDictionary *)params;
 @end
 
 @interface HHNetPerformance : NSObject
