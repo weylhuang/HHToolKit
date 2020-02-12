@@ -275,7 +275,11 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
 
 
 -(void)resolve{
-    self.responseStruct = [[self.cache hh_JSONValue] valueForKey:self.responseStructKey];
+    @try {
+        self.responseStruct = [[self.cache hh_JSONValue] valueForKey:self.responseStructKey];
+    } @catch (NSException *exception) {
+        
+    }
 }
 
 +(BOOL)hitInCache:(HHNetHelper*)reqObj{

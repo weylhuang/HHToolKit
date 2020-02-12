@@ -69,7 +69,7 @@ static BOOL debugMode = FALSE;
     NSArray* arr = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
     NSLog(@"files under directory %@", path);
     for (NSString* file in arr) {
-        NSLog(@"%@",file);
+        NSLog(@"%@, size: %llu",file, [self fileSize:[path stringByAppendingPathComponent:file]]);
     }
 }
 
