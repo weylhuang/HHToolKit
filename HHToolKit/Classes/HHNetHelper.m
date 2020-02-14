@@ -462,6 +462,12 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     
 }
 
++(void)load{
+//    HHNetHelper* net = [HHNetHelper defaultConfig];
+//    net.path = [@"https://" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    [HHNetHelper downloadFile:net destPath:[[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"a.download"]];
+}
+
 @end
 
 
