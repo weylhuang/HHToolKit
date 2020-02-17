@@ -208,7 +208,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     if (error != nil) {
         reqObj.networkFail = YES;
         reqObj.cache = error.debugDescription;
-        NSLog(@"request network fails for put: %@", urlFullPath);
+        NSLog(@"HHNetHelper, request network fails for put: %@", urlFullPath);
     }else if (error == nil && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
         reqObj.reqSuccess = YES;
         reqObj.cache = [request responseString];
@@ -218,7 +218,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
     }else{
         reqObj.reqSuccess = NO;
         reqObj.cache =[request responseString];
-        NSLog(@"request backend fails for put: %@, %@", urlFullPath, reqObj.cache);
+        NSLog(@"HHNetHelper, request backend fails for put: %@, %@", urlFullPath, reqObj.cache);
     }
     [HHNetHelper updateCache:reqObj];
     PERFORMANCE_END(put_request)
@@ -397,10 +397,10 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
             [request startSynchronous];
             
             if ([request error] == nil || [request error].code == ASIAuthenticationErrorType) {
-                NSLog(@"fullpath: %@, %dth time request success", urlFullPath, i+1);
+                NSLog(@"HHNetHelper, fullpath: %@, %dth time request success", urlFullPath, i+1);
                 break;
             }else{
-                NSLog(@"fullpath: %@, %dth time request fail, error: %@", urlFullPath, i+1, [request error]);
+                NSLog(@"HHNetHelper, fullpath: %@, %dth time request fail, error: %@", urlFullPath, i+1, [request error]);
                 if (i < reqObj.retryCount) {
                     [NSThread sleepForTimeInterval:20];
                 }
@@ -415,7 +415,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         if (error != nil) {
             reqObj.networkFail = YES;
             reqObj.cache = error.debugDescription;
-            NSLog(@"request network fails for get: %@", urlFullPath);
+            NSLog(@"HHNetHelper, request network fails for get: %@", urlFullPath);
         }else if (error == nil && request.responseStatusCode >= 200 && request.responseStatusCode < 400) {
             reqObj.reqSuccess = YES;
             reqObj.cache =[request responseString];
@@ -426,7 +426,7 @@ NSString* hh_network_speed_detect_notification = @"hh_network_speed_detect_notif
         }else{
             reqObj.reqSuccess = NO;
             reqObj.cache =[request responseString];
-            NSLog(@"request backend fails for get: %@, %@", urlFullPath, reqObj.cache);
+            NSLog(@"HHNetHelper, request backend fails for get: %@, %@", urlFullPath, reqObj.cache);
         }
         [HHNetHelper updateCache:reqObj];
         PERFORMANCE_END(get_request)
