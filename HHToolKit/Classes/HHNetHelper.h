@@ -48,6 +48,7 @@
 -(BOOL)success;
 -(id)result;
 
+// 链式调用
 -(HHNetHelper*)setUrl:(NSString *)path;
 -(HHNetHelper*)setHttpMethod:(NSString *)method;
 -(HHNetHelper*)setHttpParameters:(NSDictionary *)params;
